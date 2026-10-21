@@ -63,7 +63,7 @@ def crawl_and_sync():
     manifest = load_manifest()
     visited_pages = set()
     queue = list(START_URLS)
-    documents_dict = {}  # Use a dictionary keyed by ID to guarantee uniqueness
+    documents_dict = {}
 
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -77,10 +77,10 @@ def crawl_and_sync():
 
         print(f"Scanning: {clean_url}")
         try:
-            resp = session.get(clean_url, timeout=15)
+            resp = session.get(current_url, timeout=15)
             resp.raise_for_status()
         except Exception as e:
-            print(f"  [!] Error fetching {clean_url}: {e}")
+            print(f"  [!] Error fetching {current_url}: {e}")
             continue
 
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -110,7 +110,9 @@ def crawl_and_sync():
                     queue.append(child_clean)
 
         # 1. Process PDFs if present
+        has_pdf = False
         if pdf_links:
+            has_pdf = True
             for pdf_url, link_text in set(pdf_links):
                 url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
                 orig_filename = os.path.basename(urlparse(pdf_url).path)
@@ -148,8 +150,9 @@ def crawl_and_sync():
                     "content": extracted_text,
                 }
 
-        # 2. Process HTML Web Guidelines
-        if clean_url not in [u.rstrip("/") for u in START_URLS]:
+        # 2. Process HTML Web Guidelines ONLY if it's not a monograph page containing a PDF
+        is_monograph_section = "drug-monographs" in url_lower or "parenteral" in url_lower or "oral" in url_lower
+        if not has_pdf and not is_monograph_section and clean_url not in [u.rstrip("/") for u in START_URLS]:
             content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
             
             if content_container:
@@ -161,7 +164,7 @@ def crawl_and_sync():
                         documents_dict[doc_id] = {
                             "id": doc_id,
                             "title": page_title,
-                            "linkText": "Web Guideline (Pulldown Sections)",
+                            "linkText": "Web Guideline",
                             "category": category,
                             "sourcePageUrl": clean_url,
                             "remotePdfUrl": None,
