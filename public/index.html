@@ -35,7 +35,7 @@
           id="search-input"
           type="search"
           autocomplete="off"
-          placeholder="Search guidelines, drug names, DKA protocol, seizure management..."
+          placeholder="Search drug monographs, gentamicin trough, respiratory management, DKA..."
           class="w-full pl-10 pr-20 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
         />
         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,9 +53,10 @@
       <div class="flex flex-wrap items-center justify-between gap-2 mt-3">
         <div class="flex flex-wrap gap-1.5" id="category-filters">
           <button data-cat="ALL" class="cat-btn active px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition">All</button>
+          <button data-cat="Neonatal IV Monograph" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV Monographs</button>
+          <button data-cat="Neonatal Oral Monograph" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Oral Monographs</button>
           <button data-cat="Neonatal Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Neonatal Guidelines</button>
           <button data-cat="Paediatric Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Paediatric Guidelines</button>
-          <button data-cat="Neonatal IV Monograph" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV Monographs</button>
         </div>
         <span id="result-count" class="text-xs font-medium text-slate-500"></span>
       </div>
@@ -206,20 +207,20 @@
       if (matchedDocs.length === 0) {
         resultsContainer.innerHTML = `
           <div class="text-center py-12 text-slate-500 text-sm">
-            No guidelines or monographs matched "<strong>${query}</strong>".
+            No monographs or guidelines matched "<strong>${query}</strong>".
           </div>`;
         return;
       }
 
       resultsContainer.innerHTML = matchedDocs.map(doc => {
         let badgeStyles = "bg-slate-100 text-slate-800 border-slate-200";
-        if (doc.category.includes("IV Monograph")) badgeStyles = "bg-rose-100 text-rose-800 border-rose-200";
+        if (doc.category.includes("IV")) badgeStyles = "bg-rose-100 text-rose-800 border-rose-200";
         else if (doc.category.includes("Oral")) badgeStyles = "bg-emerald-100 text-emerald-800 border-emerald-200";
         else if (doc.category.includes("Neonatal")) badgeStyles = "bg-blue-100 text-blue-800 border-blue-200";
         else if (doc.category.includes("Paediatric")) badgeStyles = "bg-purple-100 text-purple-800 border-purple-200";
 
         const overdue = isReviewOverdue(doc.nextReview);
-        const primaryHref = doc.localPdfPath ? `.${doc.localPdfPath}` : (doc.remotePdfUrl || doc.sourcePageUrl);
+        const primaryHref = doc.localPdfPath ? `.${doc.localPdfPath}` : doc.sourcePageUrl;
         const snippetHtml = query ? buildSnippet(doc.content, query) : "";
 
         return `
