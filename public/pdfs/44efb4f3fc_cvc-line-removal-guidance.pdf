@@ -1,0 +1,625 @@
+        <!DOCTYPE html>
+        <html class="qrs-theme--default no-js" lang="en">
+
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link data-tag="FavIcon" href="/media/4wyk553x/favicon.png" rel="icon" type="image/x-icon">
+            <link data-tag="ShortcutIcon" href="/media/4wyk553x/favicon.png" rel="shortcut icon" type="image/x-icon">
+            <link nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" href="/legacy/css/site.min.css?sfv=2026-10-21" rel="stylesheet" />
+            <link nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" href="/css/RichTextEditorStyles.css?sfv=2026-10-21" rel="stylesheet" />
+            <link nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" href="/css/client-sheets/all-clients.css?sfv=2026-10-21" rel="stylesheet" />
+            <link nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" href="/css/Question Answer Builder/QABAnswerStyles.css?sfv=2026-10-21" rel="stylesheet" />
+
+
+                <script nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" src="https://kit.fontawesome.com/abb37cb1c7.js" crossorigin="anonymous"></script>
+            <!--[if lt IE 9]>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+                <script rel="preconnect" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+                <script rel="preconnect" src="//cdnjs.cloudflare.com/ajax/libs/dom4/2.0.0/dom4.js">/* DOM4 */</script>
+
+            <link nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" rel="stylesheet" href="https://use.typekit.net/jvn5jus.css">
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Organisation | Right Decisions</title>
+
+        <script nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" async src="https://www.googletagmanager.com/gtag/js?id=G-VM6HC2GPMZ"></script>
+        <script nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=">
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-VM6HC2GPMZ');
+        </script>
+
+                    <style nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" data-tag="CustomClientThemeEnabled" data-theme-primary='#10383e' data-theme-secondary='#a1d394'>
+            .govuk-header, .govuk-footer, .govuk-header__navigation-item ul {
+                background-color: #10383e;
+            }
+
+                .govuk-header .govuk-width-container, .govuk-header__content__menu, .govuk-footer__heading.govuk-heading-s, .govuk-footer__section-break, .govuk-header__navigation-item ul li:not(:last-of-type) {
+                    border-color: #a1d394;
+                }
+
+            .govuk-header__navigation-item:not(:last-of-type) {
+                border-color: #a1d394;
+            }
+
+            .govuk-header__navigation-item--quick-links&:not(:last-of-type) {
+                border-color: #a1d394;
+            }
+
+            .govuk-header__navigation-item--quick-links > ul {
+                background-color: #10383e;
+                filter: brightness(90%);
+            }
+
+            .qrs-component-search .site-search-input button {
+                background-color: #0c1724;
+            }
+
+                .qrs-component-search .site-search-input button:hover {
+                    background-color: #070d15;
+                }
+
+            #js-qrs-to-top {
+                background: #f3f2f1;
+                border: .0625rem solid #b1b4b6;
+            }
+
+                #js-qrs-to-top:hover {
+                    background: #b1b4b6;
+                }
+
+                #js-qrs-to-top i {
+                    color: #262626;
+                }
+
+            html {
+                background: #10383e !important;
+            }
+        </style>
+            <style>
+                .govuk-header__navigation-item ul::-webkit-scrollbar-thumb {
+                    background: #a1d394;
+                }
+
+                html::-webkit-scrollbar-track {
+                    background: #10383e;
+                }
+
+                html::-webkit-scrollbar-thumb {
+                    background: #a1d394;
+                }
+            </style>
+
+
+                    <style nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=">
+                        .table-responsive {
+                            max-height: 800px;
+                        }
+                    </style>
+        <script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=4f648a1b-719f-4993-aae6-e325d08e5ed3;IngestionEndpoint=https://uksouth-1.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/;ApplicationId=d923613b-0a55-40a3-b547-f489719c93b3'
+}});</script></head>
+
+        <body id="masterbody" data-id="1252" data-page-type="rdsOrganisationPage" class="quris-doc-rdsOrganisationPage qrs-custom-theme">
+            <script nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=">
+                document.body.className = (
+                    (document.body.className)
+                        ? document.body.className + ' js-enabled'
+                        : 'js-enabled');
+            </script>
+
+            
+
+
+
+
+
+
+<a href="#main-content" class="govuk-skip-link qrs-typography" onclick="skipToMain(event)" title="Use this button to be taken to skip to main content of this page.">
+    Skip to main content
+</a>
+
+
+
+<header id="top" class="govuk-header qrs-typography govuk-header--main" role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__content">
+                    <a href="https://www.rightdecisions.scot.nhs.uk/" title="Navigate to the homepage.">
+                        <img src="/media/ogxdt3w0/nhs_logo.png" class="govuk-header__icon-left" alt="NHS Scotland Logo">
+                    </a>
+
+            <div class="govuk-header__tagline">
+                <a href="https://www.rightdecisions.scot.nhs.uk/" class="govuk-header__link qrs-link govuk-!-margin-0" title="Navigate to the homepage.">
+                    Right Decision Service: supporting decisions for Scotland&#x27;s health and care
+                </a>
+            </div>
+                    <img src="/media/caknvms4/his_u6.png" class="govuk-header__icon-right" alt="Healthcare Improvement Scotland Logo">
+
+        </div>
+            <nav class="govuk-header__menu">
+                
+    <ul id="navigation" class="govuk-header__navigation" aria-label="Navigation menu" data-module="rds-header">
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'Right Decisions' page" href="/">
+                            Right Decisions 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'All resources' page" href="/all-resources/">
+                            All resources 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'Organisations' page" href="/organisations/">
+                            Organisations 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'Topics' page" href="https://www.rightdecisions.scot.nhs.uk/topics/">
+                            Topics 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'Learning &amp; support' page" href="/rds-learning-and-support/">
+                            Learning &amp; support 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'How to deliver RDS tools' page" href="https://rightdecisions.scot.nhs.uk/topics/topic?name=right-decision-service-resources">
+                            How to deliver RDS tools 
+                        </a>
+                    </li>
+                    <li class="govuk-header__navigation-item">
+                        <a class="qrs-link qrs-link--white" title="Navigate to the 'Feedback' page" href="/feedback/">
+                            Feedback 
+                        </a>
+                    </li>
+    </ul>
+
+                <button type="button" class="govuk-header__toggle-menu govuk-js-header-toggle" data-module="rds-header" aria-controls="navigation" aria-label="Use this button to toggle the visibility of this menu." title="Use this button to toggle the visibility of this menu." aria-expanded="false">Menu</button>
+
+                    <button type="button" class="govuk-header__toggle-search" aria-controls="search" aria-label="Use this button to toggle the visibility of the search facility" title="Use this button to toggle the visibility of the search facility" aria-expanded="false">
+                        <span class="visually-hidden">Search</span>
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+            </nav>
+    </div>
+</header>
+                    <div class="qrs-component--homepage-search-block ">
+                        <div class="govuk-width-container">
+                            
+  <div id="js-search" class="qrs-component qrs-component-search">
+        <form id="search" class="site-search govuk-clearfix govuk-!-margin-0 govuk-!-padding-top-0 govuk-!-padding-bottom-0" action="/search/" method="get" role="search">
+
+                <span class="govuk-heading-s govuk-!-margin-top-1 govuk-!-margin-bottom-1 govuk-!-margin-right-3">Search for</span>
+                <fieldset class="qrs-component--homepage-search-block__toggle govuk-fieldset">
+                    <legend class="visually-hidden">Search based on</legend>
+                    <label class="toggle-option selected" for="all">
+                        <input type="radio" name="searchType" id="all" value="all" checked>All content
+                    </label>
+                    <label class="toggle-option " for="toolkit">
+                        <input type="radio" id="toolkit" name="searchType" class="searchType" value="toolkit" >Toolkit titles
+                    </label>
+                </fieldset>
+
+            <div class="content govuk-clearfix qrs-component--homepage-search-block__search govuk-form-group govuk-!-margin-0">
+                <label for="searchterm" class="visually-hidden">Search for toolkits, guidelines and other information:</label>
+                <input class="searchType" type="hidden" name="searchType" value="organisation" />
+                <input type="search" placeholder="Search &#x27;NHS Lothian&#x27;..." name="searchTerm" id="s" title="Search" class="js-search-focus govuk-input govuk-!-margin-0 qrs-font" value="">
+                <button title="Use this button to search against your search query." class="govuk-button govuk-!-margin-0" type="submit">
+                    Search
+                </button>
+                
+
+                    <input type="hidden" name="org" value="12645" />
+            </div>
+        </form>
+
+            <div class="qrs-component--homepage-search-block__what-is-a-toolkit govuk-!-margin-top-4">
+                <details class="govuk-details govuk-!-margin-bottom-0">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What is a toolkit?
+                        </span>
+                    </summary>
+                    <div>
+                    
+                        <p>A toolkit is a package of resources and tools that support decision-making on a specific topic. Each toolkit is delivered as a website and downloadable mobile resource within the RDS platform.</p>
+                    </div>
+                </details>
+            </div>
+    </div>
+
+                        </div>
+                    </div>
+        <div class="govuk-breadcrumbs govuk-breadcrumbs__background-fill">
+            <div class="govuk-width-container">
+                <ol class="govuk-breadcrumbs__list" data-crumbs="2">
+                            <li data-count="1" class="govuk-breadcrumbs__list-item xs-hidden">
+                                <a nodeid="" class="qrs-link" href="/" title="Navigate to the &#x27;Right Decisions&#x27; page.">
+                                    Right Decisions
+                                </a>
+                            </li>
+                            <li class="govuk-breadcrumbs__list-item govuk-breadcrumbs__list-item--back">
+                                <a nodeid="1251" class="qrs-link" href="/organisations/" title="Navigate to the &#x27;Organisations&#x27; page.">
+                                    Back
+                                </a>
+                            </li>
+                            <li data-count="2" class="govuk-breadcrumbs__list-item xs-hidden">
+                                <a nodeid="1251" class="qrs-link" href="/organisations/" title="Navigate to the &#x27;Organisations&#x27; page.">
+                                    Organisations
+                                </a>
+                            </li>
+                    <li class="govuk-breadcrumbs__list-item xs-hidden">
+                        <span>
+                            Organisation
+                        </span>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+            <div class="govuk-width-container">
+                    <div class="qrs-grid">
+                        <div class="qrs-grid__wrapper">
+                            
+<h1 class="qrs-header-xl">NHS Lothian - 25 results</h1>
+
+
+
+<div class="qrs-grid">
+	<main>
+		<section class="qrs-component qrs-component-spacer qrs-component-resources-grid qrs-typography">
+			<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/7-steps-to-future-care-planning-previously-known-as-anticipatory-care-planning-in-care-homes-care-homes-care-at-home/?organization=nhs-lothian" data-nodeid="19017" data-id="19017" target="_self" data-type="toolkitListingPage" title="Navigate to the '7 steps to future care planning (previously known as anticipatory care planning) in care homes (care homes &amp; care at home)' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/1256/care-2.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    7 steps to future care planning (previously known as anticipatory care planning) in care homes (care homes &amp; care at home)
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/acute-oncology-guidelines/?organization=nhs-lothian" data-nodeid="51766" data-id="51766" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Acute Oncology Guidelines' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/nrqhv5hc/nhslothian.gif" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Acute Oncology Guidelines
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/antimicrobial-prescribing-nhs-lothian/?organization=nhs-lothian" data-nodeid="54032" data-id="54032" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Antimicrobial prescribing: NHS Lothian' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/2072/lothian.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Antimicrobial prescribing: NHS Lothian
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+						</div><div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/catatonia-bundle-and-guideline/?organization=nhs-lothian" data-nodeid="112650" data-id="112650" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Catatonia bundle and guideline' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/lfcjbz5p/nhs-lothian-logo.jpg" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Catatonia bundle and guideline
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/children-and-young-peoples-cancer-aftercare/?organization=nhs-lothian" data-nodeid="103605" data-id="103605" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Children and Young People&#x27;s Cancer Aftercare' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/lgopm0bv/goal.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Children and Young People&#x27;s Cancer Aftercare
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/diabetes-endocrinology/?organization=nhs-lothian" data-nodeid="18432" data-id="18432" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Diabetes &amp; endocrinology' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/c1dg3fgd/sugar-blood-level.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Diabetes &amp; endocrinology
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+						</div><div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/edinburgh-cancer-centre-nurse-handbook/?organization=nhs-lothian" data-nodeid="106507" data-id="106507" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Edinburgh Cancer Centre Nurse Handbook' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/phqlwlfw/nhs-lothian-logo.jpg" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Edinburgh Cancer Centre Nurse Handbook
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/electrolyte-disturbance/?organization=nhs-lothian" data-nodeid="4893" data-id="4893" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Electrolyte Disturbance' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/nrqhv5hc/nhslothian.gif" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Electrolyte Disturbance
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/emergency-medicine-rie/?organization=nhs-lothian" data-nodeid="59927" data-id="59927" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Emergency Medicine - RIE' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/4ecast34/high-resolution-small.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Emergency Medicine - RIE
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+						</div><div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/infectious-diseases/?organization=nhs-lothian" data-nodeid="56637" data-id="56637" target="_self" data-type="toolkitListingPage" title="Navigate to the 'Infectious diseases' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/rm5pbn4b/fever.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    Infectious diseases
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/msk-pathways/?organization=nhs-lothian" data-nodeid="46367" data-id="46367" target="_self" data-type="toolkitListingPage" title="Navigate to the 'MSK pathways' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/bjqlftu5/nhs-lothian-logo.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    MSK pathways
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="qrs-resource-grid-item">
+            <a href="/nhs-lothian-neonatal-guidelines/?organization=nhs-lothian" data-nodeid="36412" data-id="36412" target="_self" data-type="toolkitListingPage" title="Navigate to the 'NHS Lothian neonatal guidelines' item.">
+                <span>
+                        <img class="home-promo__image" src="/media/r30ew2pu/nhs-lothian-logo-2.png" alt=""/>
+                </span>
+                <div class="qrs-resource-type">Toolkit</div>
+                <h3>
+                    NHS Lothian neonatal guidelines
+                        <br />
+                        <small class="qrs-resource-grid-item__organisation-item" data-title="organisation">
+                            NHS Lothian
+                        </small>
+                </h3>
+            </a>
+        </div>
+    </div>
+						</div><div class="govuk-grid-row">
+			</div>
+		</section>
+		
+
+	<div class="qrs-component-pagination">
+		<nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+
+
+				<ul class="govuk-pagination__list">
+
+							<li class="govuk-pagination__item active"><a class="govuk-pagination__link  qrs-font" href="?name=nhs-lothian&amp;page=1">1</a></li>
+							<li class="govuk-pagination__item "><a class="govuk-pagination__link  qrs-font" href="?name=nhs-lothian&amp;page=2">2</a></li>
+							<li class="govuk-pagination__item "><a class="govuk-pagination__link  qrs-font" href="?name=nhs-lothian&amp;page=3">3</a></li>
+				</ul>
+				<div class="govuk-pagination__next govuk-pagination__page" data-page="2" rel="next">
+					<div class="govuk-link govuk-pagination__link">
+						<a href="?name=nhs-lothian&amp;page=2">
+							<span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span>
+							<svg class="govuk-pagination__icon" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+								<path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+		</nav>
+	</div>
+
+	</main>
+</div>
+
+
+                        </div>
+                </div>
+                </div>
+
+
+
+
+
+
+<footer class="govuk-footer qrs-typography qrs-has-nav qrs-has-downloads qrs-has-logos" role="contentinfo">
+    <div class="govuk-width-container">
+        <div class="govuk-footer__navigation">
+                    <div class="govuk-footer-image-grid">
+                                <div class="govuk-grid-column-one-quarter">
+                                    <img src="/media/i0mnxlz2/rds-logo-w.png?rmode=pad&amp;width=250&amp;height=100" alt="" />
+                                </div>
+                    </div>
+
+                    <div class="govuk-footer__section govuk-footer__section--navigation">
+                        <h2 class="govuk-footer__heading govuk-heading-s">
+                            Right Decision Service: supporting decisions for Scotland&#x27;s health and care
+                        </h2>
+                        <ul class="govuk-footer__list govuk-footer__list--links">
+                                <li data-title="The Right Decision Service: Scotland&#x27;s national decision support platform" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="/the-right-decision-service-scotlands-national-decision-support-platform/" title="Navigate to the 'The Right Decision Service: Scotland&#x27;s national decision support platform' page.">
+                                        The Right Decision Service: Scotland&#x27;s national decision support platform
+                                    </a>
+                                </li>
+                                <li data-title="Terms and conditions of your use of the Right Decisions Platform (RDP)" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="/terms-and-conditions-of-your-use-of-the-right-decisions-platform-rdp/" title="Navigate to the 'Terms and conditions of your use of the Right Decisions Platform (RDP)' page.">
+                                        Terms and conditions of your use of the Right Decisions Platform (RDP)
+                                    </a>
+                                </li>
+                                <li data-title="Content provider terms and conditions of use of the Right Decisions Platform (RDP)" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="/content-provider-terms-and-conditions-of-use-of-the-right-decisions-platform-rdp/" title="Navigate to the 'Content provider terms and conditions of use of the Right Decisions Platform (RDP)' page.">
+                                        Content provider terms and conditions of use of the Right Decisions Platform (RDP)
+                                    </a>
+                                </li>
+                                <li data-title="Accessibility &amp; browser/device compatibility" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="/accessibility-and-browser-device-compatibility/" title="Navigate to the 'Accessibility &amp; browser/device compatibility' page.">
+                                        Accessibility &amp; browser/device compatibility
+                                    </a>
+                                </li>
+                                <li data-title="Using screen readers" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="/using-screen-readers/" title="Navigate to the 'Using screen readers' page.">
+                                        Using screen readers
+                                    </a>
+                                </li>
+                                <li data-title="Equality and Human Rights Impact Assessment (EQIA)" class="govuk-footer__list-item">
+                                    <a class="qrs-link qrs-link--white qrs-link" href="https://www.healthcareimprovementscotland.scot/publications/equality-and-human-rights-impact-assessment-eqia-right-decision-service-february-2026/" target="_blank" title="Navigate to the 'Equality and Human Rights Impact Assessment (EQIA)' page.">
+                                        Equality and Human Rights Impact Assessment (EQIA)
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+
+                    <div class="govuk-footer__section govuk-footer__section--downloads">
+                        <h2 class="govuk-footer__heading govuk-heading-s">Downloads</h2>
+                        <ul class="govuk-footer__list ">
+                                <li class="govuk-footer__list-item">
+                                    <a href="https://apps.apple.com/app/right-decisions-health-care/id6443955210" target="_blank" title="A link to download the application from the Apple store">
+                                        <img alt="" class="home-promo__image" src="/legacy/img/app-download--apple.png">
+                                        <span class="visually-hidden">Download the app on the Apple store</span>
+                                    </a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a href="https://play.google.com/store/apps/details?id=com.tactuum.quris&amp;hl=en_GB&amp;gl=US" target="_blank" title="A link to download the application from the Google Play store">
+                                        <img alt="" class="home-promo__image" src="/legacy/img/app-download--google.png">
+                                        <span class="visually-hidden">Download the app on the Google Play store</span>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+        </div>
+        <hr class="govuk-footer__section-break">
+        <div class="govuk-footer__meta">
+            <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                <img alt="" src="/legacy/img/quris-logo.png" />
+                <span class="govuk-footer__licence-description">
+                    Powered by
+                    <a class="qrs-link qrs-link--white" href="http://www.quris.com" rel="license" title="Navigate to the 'QURIS' site (This will open in a new window).">QURIS</a> v7.30.3 &copy; 2026.
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="js-qrs-to-top" class="js-qrs-to-top qrs-custom-theme print-hide" data-module="app-back-to-top">
+    <a href="#top" title="Use this button to navigate back to the top of the page.">
+        <i class="fas fa-chevron-up"></i>
+        <span class="visually-hidden">Back to the top</span>
+    </a>
+</div>
+
+
+            <script nonce="b9naN&#x2B;cS6QhCvkgctQXPrq&#x2B;rY1aQURtHh3ow8ByRj6E=" src="/legacy/js/site.min.js?sfv=2026-10-21"></script>
+
+            
+        </body>
+        </html>

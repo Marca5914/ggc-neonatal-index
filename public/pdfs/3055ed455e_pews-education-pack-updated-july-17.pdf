@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="theme" content="NHS-nightingale-2.2.0">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Healthcare Improvement Scotland</title>
+<meta name='robots' content='max-image-preview:large' />
+<style>html{line-height:1.15;-webkit-text-size-adjust:100%;overflow-x:hidden}body{margin:0}a{background-color:rgba(0,0,0,0)}button,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button{text-transform:none}button,[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,button,input{font-family:Frutiger W01,Arial,Sans-serif}h2{clear:both}p{margin-bottom:1.5em}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{background:#fff}ul{list-style:disc}li>ul{margin-bottom:0;margin-left:1.5em}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.clear:before,.clear:after{content:"";display:table;table-layout:fixed}.clear:after{clear:both}html{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}*,*:before,*:after{-moz-box-sizing:inherit;-webkit-box-sizing:inherit;box-sizing:inherit}button,input{font-family:inherit}a{color:#005eb8}a:visited{color:#330072}html{background-color:#d8dde0;overflow-y:scroll}@font-face{font-display:swap;font-family:"Frutiger W01";font-style:normal;font-weight:400;src:url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix");src:url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.eot?#iefix") format("eot"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2") format("woff2"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff") format("woff"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.ttf") format("truetype"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.svg#7def0e34-f28d-434f-b2ec-472bde847115") format("svg")}@font-face{font-display:swap;font-family:"Frutiger W01";font-style:normal;font-weight:600;src:url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix");src:url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.eot?#iefix") format("eot"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2") format("woff2"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff") format("woff"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.ttf") format("truetype"),url("https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.svg#eae74276-dd78-47e4-9b27-dac81c3411ca") format("svg")}html{font-family:Frutiger W01,Arial,Sans-serif}body{background-color:#f0f4f5;color:#212b32;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;line-height:1.5;margin:0;min-height:100%}.nhsuk-grid-row:after{clear:both;content:"";display:block}.nhsuk-grid-row{margin-left:-16px;margin-right:-16px}.nhsuk-grid-column-one-third{box-sizing:border-box;padding:0 16px}@media (min-width:48.0625em){.nhsuk-grid-column-one-third{float:left;width:33.3333%}}.nhsuk-grid-column-one-half{box-sizing:border-box;padding:0 16px}@media (min-width:48.0625em){.nhsuk-grid-column-one-half{float:left;width:50%}}.nhsuk-grid-column-two-thirds{box-sizing:border-box;padding:0 16px}@media (min-width:48.0625em){.nhsuk-grid-column-two-thirds{float:left;width:66.6666%}}.nhsuk-grid-column-full{box-sizing:border-box;padding:0 16px}@media (min-width:48.0625em){.nhsuk-grid-column-full{float:left;width:100%}}.nhsuk-main-wrapper{padding-top:40px}@media (min-width:40.0625em){.nhsuk-main-wrapper{padding-top:48px}}.nhsuk-main-wrapper{padding-bottom:40px}@media (min-width:40.0625em){.nhsuk-main-wrapper{padding-bottom:48px}}.nhsuk-main-wrapper>*:first-child{margin-top:0}.nhsuk-main-wrapper>*:last-child{margin-bottom:0}.nhsuk-main-wrapper{display:block}.nhsuk-width-container{margin:0 16px;max-width:960px}@media (min-width:48.0625em){.nhsuk-width-container{margin:0 32px}}@media (min-width:1024px){.nhsuk-width-container{margin:0 auto}}.nhsuk-icon{height:34px;width:34px}.nhsuk-icon__search{fill:#005eb8}.nhsuk-icon__arrow-right-circle{fill:#007f3b}.nhsuk-icon__chevron-down{fill:#fff;height:24px;position:absolute;right:4px;transform:rotate(90deg);width:24px}ul{font-size:16px;font-size:1rem;line-height:1.5}@media (min-width:40.0625em){ul{font-size:19px;font-size:1.1875rem;line-height:1.47368}}ul{margin-bottom:16px}@media (min-width:40.0625em){ul{margin-bottom:24px}}ul{list-style-type:none;margin-top:0;padding-left:0}ul ul{margin-top:8px}@media (min-width:40.0625em){ul ul{margin-top:8px}}ul ul{margin-bottom:0}ul>li{margin-bottom:8px}@media (min-width:40.0625em){ul>li{margin-bottom:8px}}ul>li:last-child{margin-bottom:0}ul{list-style-type:disc;padding-left:20px}h2{font-size:24px;font-size:1.5rem;line-height:1.33333}@media (min-width:40.0625em){h2{font-size:32px;font-size:2rem;line-height:1.25}}h2{display:block;font-weight:600;margin-top:0;margin-bottom:16px}@media (min-width:40.0625em){h2{margin-bottom:24px}}.nhsuk-heading-m{font-size:20px;font-size:1.25rem;line-height:1.4}@media (min-width:40.0625em){.nhsuk-heading-m{font-size:24px;font-size:1.5rem;line-height:1.33333}}.nhsuk-heading-m{display:block;font-weight:600;margin-top:0;margin-bottom:16px}@media (min-width:40.0625em){.nhsuk-heading-m{margin-bottom:24px}}p{font-size:16px;font-size:1rem;line-height:1.5}@media (min-width:40.0625em){p{font-size:19px;font-size:1.1875rem;line-height:1.47368}}p{display:block;margin-top:0;margin-bottom:16px}@media (min-width:40.0625em){p{margin-bottom:24px}}p{color:inherit}.nhsuk-u-visually-hidden{border:0;clip:rect(0 0 0 0);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.nhsuk-action-link{margin-bottom:32px}@media (min-width:40.0625em){.nhsuk-action-link{margin-bottom:40px}}.nhsuk-action-link__link{font-weight:400;font-size:18px;font-size:1.125rem;line-height:1.55556}@media (min-width:40.0625em){.nhsuk-action-link__link{font-size:22px;font-size:1.375rem;line-height:1.45455}}.nhsuk-action-link__link{display:inline-block;font-weight:600;padding-left:38px;position:relative;text-decoration:none}@media (max-width:40.0525em){.nhsuk-action-link__link{padding-left:26px}}.nhsuk-action-link__link .nhsuk-icon__arrow-right-circle{fill:#007f3b;height:36px;left:-3px;position:absolute;top:-2px;width:36px}@media (max-width:40.0525em){.nhsuk-action-link__link .nhsuk-icon__arrow-right-circle{height:24px;left:-2px;margin-bottom:0;top:2px;width:24px}}.nhsuk-breadcrumb{padding-bottom:16px;padding-top:20px}@media (max-width:40.0525em){.nhsuk-breadcrumb__list{display:none}}.nhsuk-breadcrumb__list{list-style:none;margin:0;padding:0}.nhsuk-breadcrumb__item{font-weight:400;font-size:14px;font-size:.875rem;line-height:1.71429}@media (min-width:40.0625em){.nhsuk-breadcrumb__item{font-size:16px;font-size:1rem;line-height:1.5}}.nhsuk-breadcrumb__item{display:inline-block;margin-bottom:0}.nhsuk-breadcrumb__back{font-weight:400;font-size:14px;font-size:.875rem;line-height:1.71429}@media (min-width:40.0625em){.nhsuk-breadcrumb__back{font-size:16px;font-size:1rem;line-height:1.5}}.nhsuk-breadcrumb__back{margin:0;padding-left:16px;position:relative}@media (min-width:40.0625em){.nhsuk-breadcrumb__back{display:none}}.nhsuk-card{margin-bottom:40px}@media (min-width:40.0625em){.nhsuk-card{margin-bottom:48px}}.nhsuk-card{background:#fff;border:1px solid #d8dde0;position:relative;width:100%}.nhsuk-card__content>*:first-child{margin-top:0}.nhsuk-card__content>*:last-child{margin-bottom:0}.nhsuk-card__content{padding:24px}@media (min-width:40.0625em){.nhsuk-card__content{padding:32px}}.nhsuk-card__heading,.nhsuk-card__description{margin-bottom:16px}.nhsuk-card--clickable{border-bottom-width:4px}.nhsuk-card--clickable .nhsuk-card__link::before{background-color:rgba(255,255,255,0);bottom:0;content:"";display:block;left:0;position:absolute;right:0;top:0}.nhsuk-card-group{display:flex;flex-wrap:wrap;margin-bottom:16px;padding:0}@media (max-width:48.0525em){.nhsuk-card-group{margin-bottom:40px}}.nhsuk-card-group__item{display:flex}@media (max-width:48.0525em){.nhsuk-card-group__item{flex:0 0 100%}}.nhsuk-card-group__item{list-style-type:none;margin-bottom:0}.nhsuk-card-group__item .nhsuk-card{margin-bottom:32px}@media (max-width:48.0525em){.nhsuk-card-group__item .nhsuk-card{margin-bottom:16px}.nhsuk-card-group__item:last-child .nhsuk-card{margin-bottom:0}}.nhsuk-footer{background-color:#d8dde0;margin-bottom:15px}@media (min-width:48.0625em){.nhsuk-footer{display:flex;justify-content:space-between}}.nhsuk-footer__list{padding-bottom:16px}@media (min-width:40.0625em){.nhsuk-footer__list{padding-bottom:24px}}.nhsuk-footer__list{list-style-type:none;margin-bottom:25px;padding-left:0}@media (min-width:48.0625em){.nhsuk-footer__list{float:left;padding-bottom:0;padding-right:40px;width:75%}}.nhsuk-footer__list-item{font-weight:400;font-size:14px;font-size:.875rem;line-height:1.71429}@media (min-width:40.0625em){.nhsuk-footer__list-item{font-size:16px;font-size:1rem;line-height:1.5}}@media (min-width:48.0625em){.nhsuk-footer__list-item{float:none;margin-right:0}}.nhsuk-footer__list-item-link{color:#003087}.nhsuk-header{background-color:#005eb8}.nhsuk-header__container{margin:0 16px;max-width:960px}@media (min-width:48.0625em){.nhsuk-header__container{margin:0 32px}}@media (min-width:1024px){.nhsuk-header__container{margin:0 auto}}.nhsuk-header__container{padding:20px 0}@media (max-width:40.0525em){.nhsuk-header__container{padding-bottom:0}}@media (min-width:40.0625em){.nhsuk-header__container{border-bottom:1px solid rgba(255,255,255,.2);display:flex;justify-content:space-between}}@media (max-width:40.0525em){.nhsuk-header__logo{position:relative;z-index:1}}.nhsuk-header__logo .nhsuk-logo__background{fill:#fff}.nhsuk-header__logo .nhsuk-logo__text{fill:#005eb8}@media (min-width:40.0625em){.nhsuk-header__logo{padding-left:0}}.nhsuk-header__logo .nhsuk-logo{height:40px;width:100px;border:0}@media (max-width:48.0525em){.nhsuk-header__logo{max-width:60%}}@media (max-width:450px){.nhsuk-header__logo{max-width:50%}}.nhsuk-header__link{height:40px;width:100px;display:block}.nhsuk-header__content{position:relative}.nhsuk-header__search{position:relative;text-align:right}@media (min-width:40.0625em){.nhsuk-header__search{margin-left:8px}}.nhsuk-header__search-form{height:100%;overflow:visible}@media (max-width:40.0525em){.nhsuk-header__search-form{display:flex;margin:16px 0 0;position:relative;width:100%}}@media (min-width:40.0625em){.nhsuk-header__search-wrap{display:block}}.nhsuk-search__input{-webkit-appearance:listbox;border-bottom-left-radius:4px;border-bottom-right-radius:0;border-top-left-radius:4px;border-top-right-radius:0;padding:0 16px}.nhsuk-search__input:-ms-input-placeholder{color:#4c6272;font-size:16px}.nhsuk-search__input::-webkit-input-placeholder{color:#4c6272;font-size:16px}@media (max-width:40.0525em){.nhsuk-search__input{border:1px solid #fff;border-bottom-right-radius:4px;border-top-right-radius:4px;flex-grow:2;-ms-flex-positive:2;font-size:inherit;height:40px;margin:0;outline:none;width:100%;z-index:1}}@media (min-width:40.0625em){.nhsuk-search__input{border:1px solid #fff;font-size:16px;height:40px;width:200px}}@media (min-width:48.0625em){.nhsuk-search__input{width:235px}}.nhsuk-search__submit{border:0;border-bottom-left-radius:0;border-bottom-right-radius:4px;border-top-left-radius:0;border-top-right-radius:4px;float:right;font-size:inherit;line-height:inherit;outline:none;padding:0}.nhsuk-search__submit::-moz-focus-inner{border:0}@media (max-width:40.0525em){.nhsuk-search__submit{background-color:#f0f4f5;border:0;height:40px;margin:0;padding:8px 8px 0;position:absolute;right:0;top:0;z-index:9}.nhsuk-search__submit .nhsuk-icon__search{fill:#005eb8;height:27px;width:27px}}@media (min-width:40.0625em){.nhsuk-search__submit{background-color:#f0f4f5;display:block;height:40px;line-height:1;width:44px}.nhsuk-search__submit .nhsuk-icon__search{height:27px;width:27px}}.nhsuk-header__navigation-link{font-weight:400;font-size:14px;font-size:.875rem;line-height:1.71429}@media (min-width:40.0625em){.nhsuk-header__navigation-link{font-size:16px;font-size:1rem;line-height:1.5}}.nhsuk-header__navigation-link{border-bottom:4px solid rgba(0,0,0,0);border-top:4px solid rgba(0,0,0,0);color:#fff;display:block;font-size:inherit;padding:16px 12px;text-decoration:underline;white-space:nowrap}@media (min-width:40.0625em){.nhsuk-header__navigation-link{padding:12px 16px}}.nhsuk-header__navigation-link:visited{color:#fff}@media (min-width:61.875em){.nhsuk-header__navigation-link:visited{color:#fff}}.nhsuk-header__menu-toggle{background:rgba(0,0,0,0);border:0;border-bottom:4px solid rgba(0,0,0,0);border-radius:0;border-top:4px solid rgba(0,0,0,0);box-sizing:border-box;margin:0;overflow:visible;position:relative;right:0;text-align:center;text-decoration:underline;vertical-align:top;visibility:hidden;width:auto;z-index:1}.nhsuk-header__menu-toggle.nhsuk-header__navigation-link{padding-right:30px}@media (min-width:48.0625em){.nhsuk-header__menu-toggle{display:none}}.nhsuk-navigation{display:flex}@media (max-width:40.0525em){.nhsuk-navigation{position:relative;z-index:10}}.nhsuk-header__drop-down,.nhsuk-header__navigation-list{list-style:none;margin:0;padding:0}.nhsuk-header__navigation-list{margin:0 16px;max-width:960px}@media (min-width:48.0625em){.nhsuk-header__navigation-list{margin:0 32px}}@media (min-width:1024px){.nhsuk-header__navigation-list{margin:0 auto}}.nhsuk-header__navigation-list{width:100%}@media (min-width:48.0625em){.nhsuk-header__navigation-list{display:flex;justify-content:space-between}}.js-enabled .nhsuk-header__navigation-list{display:flex}.nhsuk-header__navigation-item{margin-bottom:0}.nhsuk-navigation-container{position:relative}.nhsuk-header__drop-down{background-color:#fff;border-bottom:4px solid #f0f4f5;overflow:hidden;position:absolute;right:0;top:100%;left:0}.nhsuk-header__drop-down--hidden{display:none}.nhsuk-mobile-menu-container{align-self:center;display:none}.nhsuk-header--organisation .nhsuk-header__link{height:auto;text-decoration:none;width:auto}.nhsuk-header--organisation .nhsuk-header__logo .nhsuk-logo{height:32px;width:80px}@media (max-width:450px){.nhsuk-header--organisation .nhsuk-header__logo .nhsuk-logo{height:24px;width:60px}}@media (max-width:375px){.nhsuk-header--organisation .nhsuk-header__logo .nhsuk-logo{height:20px;width:50px}}.nhsuk-organisation-name{color:#fff;display:block;font-size:22px;font-weight:bold;letter-spacing:.2px;line-height:23px;margin-top:-2px}@media (max-width:450px){.nhsuk-organisation-name{font-size:17px;letter-spacing:.1px;line-height:17px}}@media (max-width:375px){.nhsuk-organisation-name{font-size:13px;line-height:13px}}.nhsuk-organisation-name .nhsuk-organisation-name-split{display:block}.nhsuk-organisation-descriptor{color:#fff;display:block;font-size:15px;font-weight:bold;line-height:21px}@media (max-width:450px){.nhsuk-organisation-descriptor{font-size:12px;line-height:18px}}@media (max-width:375px){.nhsuk-organisation-descriptor{font-size:10px;line-height:13px}}.nhsuk-header__transactional-service-name{padding-left:16px;padding-top:3px}@media (max-width:40.0525em){.nhsuk-header__transactional-service-name{padding-bottom:16px}}@media (max-width:40.0525em){.nhsuk-header__transactional-service-name{padding-left:0;padding-top:8px;width:100%}}.nhsuk-header__transactional-service-name--link{color:#fff}.nhsuk-header__transactional-service-name--link{font-weight:400;font-size:16px;font-size:1rem;line-height:1.5}@media (min-width:40.0625em){.nhsuk-header__transactional-service-name--link{font-size:19px;font-size:1.1875rem;line-height:1.47368}}.nhsuk-header__transactional-service-name--link{text-decoration:none}.nhsuk-header--white{background-color:#fff}.nhsuk-header--white .nhsuk-header__search-wrap{margin-bottom:16px}.nhsuk-header--white .nhsuk-search__submit{background-color:#005eb8}.nhsuk-header--white .nhsuk-search__submit .nhsuk-icon__search{fill:#fff}@media (max-width:40.0525em){.nhsuk-header--white .nhsuk-header__search-form{padding-top:0}}.nhsuk-panel-group{margin-left:0;margin-right:0}#primary p{-ms-word-wrap:break-word;word-wrap:break-word}#cookie-notice{position:fixed;left:0;bottom:0;width:100%}.nhsuk-header__navigation-item{border-top:none}.nhsuk-navigation-container .nhsuk-navigation .nhsuk-icon__chevron-down{fill:#fff}.nhsuk-navigation-container .nhsuk-navigation .nhsuk-header__navigation-link{font-size:1rem}@media (max-width:40.0525em){.nhsuk-search__submit{background-color:#f0f4f5;border:0;margin:0;padding:8px 8px 0;position:absolute;right:0;top:auto;height:40px;z-index:9}.nhsuk-header__search-form{padding:16px 0 0 0}.nhsuk-header__search-wrap{display:block}}@media (min-width:40.0625em){.nhsuk-header__container{justify-content:normal}.nhsuk-header__transactional-service-name{padding-left:28px;width:100%}.nhsuk-header__search{margin-left:0px;width:100%}.nhsuk-header__content{width:100%}}@media (min-width:48.0625em){.nhsuk-header--organisation .nhsuk-header__link{max-width:500px;width:max-content}}.nhsuk-grid-column-two-thirds.contentleft{padding:0 16px 0 16px}.nhsuk-grid-column-full{padding:0}.nhsuk-grid-column-one-third,.nhsuk-grid-column-one-half{flex-flow:wrap}.nhsuk-grid-column-full{clear:both}.nhsuk-grid-column-two-thirds.index{padding:0 16px 0 0}aside#secondary>section{margin-top:0}.nhsuk-icon__arrow-right-circle{vertical-align:middle}.clear:after{clear:both;content:"";display:block}.nhsuk-readmore{text-align:left;padding-bottom:16px}button{margin:0}.nhsuk-card .nhsuk-card__description{display:flow-root}#secondary section{border-top:2px solid #005eb8;margin-bottom:32px;padding-top:16px;padding-bottom:16px}#secondary section h2{font-size:1.25rem;line-height:1.2;margin-bottom:16px;padding-top:16px}@media (min-width:40.0625em){#secondary section h2{font-size:1.5rem;line-height:1.2}}#secondary section ul{list-style:none;margin-bottom:16px;padding-left:0}#secondary section ul li{font-size:.875rem;line-height:1.71429;margin-bottom:8px}@media (min-width:40.0625em){#secondary section ul li{font-size:1rem;line-height:1.5}}#secondary section ul li a{padding:0}#secondary section ul>li{border-bottom:1px solid #aeb7bd}#secondary section ul li a{border-bottom:none;padding:0}.nhsuk-global-alert{background-color:#ffeb3b;padding-bottom:24px;padding-top:24px}.nhsuk-hero__overlay{margin-bottom:50px}.nhsuk-card .nhsuk-card__description{display:flow-root}.nhsuk-panel{margin-bottom:40px}@media (min-width:40.0625em){.nhsuk-panel{margin-bottom:48px}}.nhsuk-panel{margin-top:40px}@media (min-width:40.0625em){.nhsuk-panel{margin-top:48px}}.nhsuk-panel{padding:24px}@media (min-width:40.0625em){.nhsuk-panel{padding:32px}}.nhsuk-panel{background-color:#fff;color:#212b32}.nhsuk-panel{width:100%}.nhsuk-panel-with-label{margin-bottom:40px}@media (min-width:40.0625em){.nhsuk-panel-with-label{margin-bottom:48px}}.nhsuk-panel-with-label{margin-top:40px}@media (min-width:40.0625em){.nhsuk-panel-with-label{margin-top:48px}}.nhsuk-panel-with-label{padding:24px}@media (min-width:40.0625em){.nhsuk-panel-with-label{padding:32px}}.nhsuk-panel-with-label{background-color:#fff;color:#212b32}.nhsuk-panel-with-label{border:1px solid #d8dde0;padding-top:0!important}.nhsuk-panel-with-label__label{font-size:20px;font-size:1.25rem;line-height:1.4}@media (min-width:40.0625em){.nhsuk-panel-with-label__label{font-size:24px;font-size:1.5rem;line-height:1.33333}}.nhsuk-panel-with-label__label{background-color:#005eb8;color:#fff;display:inline-block;margin:0 0 8px -33px;padding:8px 32px;position:relative;top:-16px}@media (max-width:40.0525em){.nhsuk-panel-with-label__label{margin-left:-25px;margin-right:0;padding:8px 24px;top:-8px}}.nhsuk-panel-group{display:flex;flex-wrap:wrap;margin-bottom:32px}@media (max-width:48.0525em){.nhsuk-panel-group{margin-bottom:24px}}.nhsuk-panel-with-label{width:100%}#cookie-notice{position:fixed;min-width:100%;height:auto;padding:16px 0;z-index:100000;letter-spacing:0;left:0;text-align:center;border-top:4px solid #003087;font-weight:normal;padding:0}</style><link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Healthcare Improvement Scotland &raquo; Feed" href="https://www.healthcareimprovementscotland.scot/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Healthcare Improvement Scotland &raquo; Comments Feed" href="https://www.healthcareimprovementscotland.scot/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.healthcareimprovementscotland.scot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.healthcareimprovementscotland.scot%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.healthcareimprovementscotland.scot/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.healthcareimprovementscotland.scot%2F&#038;format=xml" />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.healthcareimprovementscotland.scot/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-group-inline-css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://www.healthcareimprovementscotland.scot/wp-includes/blocks/group/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='his-hero-banner-block-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/blocks/his-hero-banner/his-hero-banner.css?ver=1790252364' media='all' />
+<link rel='stylesheet' id='keeping-informed-block-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/blocks/keeping-informed/keeping-informed.css?ver=1790252364' media='all' />
+<link rel='stylesheet' id='latest-news-block-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/blocks/latest-news/latest-news.css?ver=1790252364' media='all' />
+
+<link rel='stylesheet' id='nhs-document-upload-style-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/blocks/nhs-document-upload/style.css?ver=1790252365' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--nhs-blue: #005eb8;--wp--preset--color--nhs-dark-blue: #003087;--wp--preset--color--nhs-bright-blue: #0072ce;--wp--preset--color--nhs-light-blue: #41b6e6;--wp--preset--color--nhs-mid-grey: #768692;--wp--preset--color--nhs-light-grey: #e8edee;--wp--preset--color--nhs-purple: #330072;--wp--preset--color--nhs-pink: #ae2573;--wp--preset--color--nhs-light-purple: #704c9c;--wp--preset--color--nhs-light-green: #78be20;--wp--preset--color--nhs-dark-green: #006747;--wp--preset--color--nhs-aqua-green: #00a499;--wp--preset--color--nhs-black: #231f20;--wp--preset--color--emergency-red: #da291c;--wp--preset--color--nhs-yellow: #fae100;--wp--preset--color--nhs-warm-yellow: #ffb81c;--wp--preset--color--nhs-grey-dark: #425563;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-nhs-blue-color{color: var(--wp--preset--color--nhs-blue) !important;}.has-nhs-dark-blue-color{color: var(--wp--preset--color--nhs-dark-blue) !important;}.has-nhs-bright-blue-color{color: var(--wp--preset--color--nhs-bright-blue) !important;}.has-nhs-light-blue-color{color: var(--wp--preset--color--nhs-light-blue) !important;}.has-nhs-mid-grey-color{color: var(--wp--preset--color--nhs-mid-grey) !important;}.has-nhs-light-grey-color{color: var(--wp--preset--color--nhs-light-grey) !important;}.has-nhs-purple-color{color: var(--wp--preset--color--nhs-purple) !important;}.has-nhs-pink-color{color: var(--wp--preset--color--nhs-pink) !important;}.has-nhs-light-purple-color{color: var(--wp--preset--color--nhs-light-purple) !important;}.has-nhs-light-green-color{color: var(--wp--preset--color--nhs-light-green) !important;}.has-nhs-dark-green-color{color: var(--wp--preset--color--nhs-dark-green) !important;}.has-nhs-aqua-green-color{color: var(--wp--preset--color--nhs-aqua-green) !important;}.has-nhs-black-color{color: var(--wp--preset--color--nhs-black) !important;}.has-emergency-red-color{color: var(--wp--preset--color--emergency-red) !important;}.has-nhs-yellow-color{color: var(--wp--preset--color--nhs-yellow) !important;}.has-nhs-warm-yellow-color{color: var(--wp--preset--color--nhs-warm-yellow) !important;}.has-nhs-grey-dark-color{color: var(--wp--preset--color--nhs-grey-dark) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-nhs-blue-background-color{background-color: var(--wp--preset--color--nhs-blue) !important;}.has-nhs-dark-blue-background-color{background-color: var(--wp--preset--color--nhs-dark-blue) !important;}.has-nhs-bright-blue-background-color{background-color: var(--wp--preset--color--nhs-bright-blue) !important;}.has-nhs-light-blue-background-color{background-color: var(--wp--preset--color--nhs-light-blue) !important;}.has-nhs-mid-grey-background-color{background-color: var(--wp--preset--color--nhs-mid-grey) !important;}.has-nhs-light-grey-background-color{background-color: var(--wp--preset--color--nhs-light-grey) !important;}.has-nhs-purple-background-color{background-color: var(--wp--preset--color--nhs-purple) !important;}.has-nhs-pink-background-color{background-color: var(--wp--preset--color--nhs-pink) !important;}.has-nhs-light-purple-background-color{background-color: var(--wp--preset--color--nhs-light-purple) !important;}.has-nhs-light-green-background-color{background-color: var(--wp--preset--color--nhs-light-green) !important;}.has-nhs-dark-green-background-color{background-color: var(--wp--preset--color--nhs-dark-green) !important;}.has-nhs-aqua-green-background-color{background-color: var(--wp--preset--color--nhs-aqua-green) !important;}.has-nhs-black-background-color{background-color: var(--wp--preset--color--nhs-black) !important;}.has-emergency-red-background-color{background-color: var(--wp--preset--color--emergency-red) !important;}.has-nhs-yellow-background-color{background-color: var(--wp--preset--color--nhs-yellow) !important;}.has-nhs-warm-yellow-background-color{background-color: var(--wp--preset--color--nhs-warm-yellow) !important;}.has-nhs-grey-dark-background-color{background-color: var(--wp--preset--color--nhs-grey-dark) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-nhs-blue-border-color{border-color: var(--wp--preset--color--nhs-blue) !important;}.has-nhs-dark-blue-border-color{border-color: var(--wp--preset--color--nhs-dark-blue) !important;}.has-nhs-bright-blue-border-color{border-color: var(--wp--preset--color--nhs-bright-blue) !important;}.has-nhs-light-blue-border-color{border-color: var(--wp--preset--color--nhs-light-blue) !important;}.has-nhs-mid-grey-border-color{border-color: var(--wp--preset--color--nhs-mid-grey) !important;}.has-nhs-light-grey-border-color{border-color: var(--wp--preset--color--nhs-light-grey) !important;}.has-nhs-purple-border-color{border-color: var(--wp--preset--color--nhs-purple) !important;}.has-nhs-pink-border-color{border-color: var(--wp--preset--color--nhs-pink) !important;}.has-nhs-light-purple-border-color{border-color: var(--wp--preset--color--nhs-light-purple) !important;}.has-nhs-light-green-border-color{border-color: var(--wp--preset--color--nhs-light-green) !important;}.has-nhs-dark-green-border-color{border-color: var(--wp--preset--color--nhs-dark-green) !important;}.has-nhs-aqua-green-border-color{border-color: var(--wp--preset--color--nhs-aqua-green) !important;}.has-nhs-black-border-color{border-color: var(--wp--preset--color--nhs-black) !important;}.has-emergency-red-border-color{border-color: var(--wp--preset--color--emergency-red) !important;}.has-nhs-yellow-border-color{border-color: var(--wp--preset--color--nhs-yellow) !important;}.has-nhs-warm-yellow-border-color{border-color: var(--wp--preset--color--nhs-warm-yellow) !important;}.has-nhs-grey-dark-border-color{border-color: var(--wp--preset--color--nhs-grey-dark) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='google-fonts-roboto-css' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&#038;display=swap' media='all' />
+<link rel='stylesheet' id='nightingale-style-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale/style.min.css?ver=2.7.15' media='all' />
+<link rel='stylesheet' id='nightingale-page-colours-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale/page-colours.min.css?ver=2.7.15' media='all' />
+<link rel='stylesheet' id='page-style-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/page-colours.css?ver=1792576366' media='all' />
+<link rel='stylesheet' id='nightingale-child-style-css' href='https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/style.css?ver=1792576366' media='all' />
+<script id="jquery-core-js" src="https://www.healthcareimprovementscotland.scot/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.healthcareimprovementscotland.scot/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.healthcareimprovementscotland.scot/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.healthcareimprovementscotland.scot/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.healthcareimprovementscotland.scot/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel="canonical" href="https://www.healthcareimprovementscotland.scot/" />
+<link rel='shortlink' href='https://www.healthcareimprovementscotland.scot/' />
+<link rel="icon" href="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-favicon-270x270.png" />
+<style id="wp-custom-css">
+
+
+</style>
+</head>
+<body class="home wp-singular page-template page-template-full-width-page page-template-full-width-page-php page page-id-2 wp-custom-logo wp-embed-responsive wp-theme-nightingale wp-child-theme-nightingale-child js-enabled roboto-light page-header-default page-colour--nhs-blue" >
+
+<a class="skip-link screen-reader-text" href="#maincontent">Skip to content</a>
+
+<div class="nhsuk-cookie-banner" id="nhsuk-cookie-banner" style="display: none" role="dialog" aria-labelledby="cookie-banner-heading" aria-describedby="cookie-banner-desc">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-cookie-banner__content">
+          <h2 class="nhsuk-cookie-banner__heading nhsuk-heading-m" id="cookie-banner-heading">Cookies on this website</h2>
+          <p class="nhsuk-cookie-banner__desc" id="cookie-banner-desc">We use cookies to improve your experience of our website. You can find out more or opt-out from some cookies.</p>
+          <div class="nhsuk-cookie-banner__buttons">
+            <button type="button" class="nhsuk-button" id="nhsuk-cookie-banner-accept">I'm OK with cookies</button>
+            <button type="button" class="nhsuk-button nhsuk-button--secondary" id="nhsuk-cookie-banner-reject">I'd like to manage the cookies</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<header class="nhsuk-header nhsuk-header--transactional nhsuk-header--white" role="banner"><div class="nhsuk-header__container">
+	
+		<div class="nhsuk-header__logo">
+			<!-- <a href="https://www.healthcareimprovementscotland.scot" class="nhsuk-header__link nhsuk-header__link--service" aria-label="Healthcare Improvement Scotland homepage"> -->
+				<a href="https://www.healthcareimprovementscotland.scot/" class="custom-logo-link" rel="home" aria-current="page"><img width="632" height="191" src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-HIS_LOGO_MASTER_RGB.png" class="custom-logo" alt="Healthcare Improvement Scotland" decoding="async" fetchpriority="high" srcset="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-HIS_LOGO_MASTER_RGB.png 632w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2024/02/cropped-HIS_LOGO_MASTER_RGB-300x91.png 300w" sizes="(max-width: 632px) 100vw, 632px" /></a>			</a>
+		</div>
+			<div class="nhsuk-header__content" id="content-header">
+
+		
+					<div class="nhsuk-header__search" role="search" aria-label="Search this website">
+				<div class="nhsuk-header__search-wrap" id="wrap-search">
+	<form class="nhsuk-header__search-form" id="search" action="/" method="get" role="search">
+	<label class="nhsuk-u-visually-hidden" for="search-field">Search this website</label>
+		<input class="nhsuk-search__input" id="search-field" name="s" type="search" placeholder="Search" autocomplete="off">
+		<button class="nhsuk-search__submit" type="submit">
+			<svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+				aria-hidden="true" focusable="false">
+				<path
+					d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+				</path>
+			</svg>
+			<span class="nhsuk-u-visually-hidden">Search</span>
+		</button>
+	</form>
+</div>
+			</div>
+			
+	</div>
+	
+</div>
+
+<div class="nhsuk-navigation-container">
+	<nav class="nhsuk-navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
+	<ul id="menu-menu-top-menu" class="nhsuk-header__navigation-list"><li id="menu-item-1143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1143 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/clinical-guidance-for-professionals/" class="nhsuk-header__navigation-link">Clinical guidance</a></li>
+<li id="menu-item-1142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1142 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/improving-care/" class="nhsuk-header__navigation-link">Improving care</a></li>
+<li id="menu-item-1141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1141 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/" class="nhsuk-header__navigation-link">Inspections and reviews</a></li>
+<li id="menu-item-23204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23204 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/?s=&#038;category=news&#038;published_after=&#038;published_before=&#038;search_context=publications" class="nhsuk-header__navigation-link">News</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/publications/" class="nhsuk-header__navigation-link">Publications</a></li>
+<li id="menu-item-1140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1140 nhsuk-header__navigation-item"><a href="https://www.healthcareimprovementscotland.scot/work-with-us/" class="nhsuk-header__navigation-link">Work with us</a></li>
+<li class="nhsuk-mobile-menu-container"><button class="nhsuk-header__menu-toggle nhsuk-header__navigation-link" id="toggle-menu" aria-expanded="false">
+            <span class="nhsuk-u-visually-hidden">Browse</span>
+            More
+            <svg class="nhsuk-icon nhsuk-icon__chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </button> <ul class="nhsuk-header__drop-down nhsuk-header__drop-down--hidden"></ul></li></ul>
+	</nav>
+</div>
+
+</header>
+
+<div id="content" class="nhsuk-width-container-full">
+	<main class="nhsuk-main-wrapper nhsuk-main-wrapper--no-padding page-style--inherit-site-wide-colour-settings" id="maincontent" role="main">
+		<div id="contentinner" class="nhsuk-width-container">
+		
+<div id="primary" class=" nhsuk-grid-row nhsuk-width-restrict">
+	<div class="nhsuk-grid-column-full full-width">
+
+		
+<article id="post-2" class="post-2 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">Home</h1>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		    <header class="his-hero-banner wp-block-nhsblocks-heroblock nhsuk-hero--image-description" 
+            role="banner" 
+            id="hero-banner-45ac9611-a263-4a14-9d52-797985a2cede"
+            aria-labelledby="hero-title-df6fb8b8-9104-40e7-81d4-776f659db981"
+            style="background-image: url(https://his-wordpress.testing.nhsscotland.net/wp-content/uploads/2026/02/newbackground.jpg);"            aria-label="Decorative background">
+        <div class="his-hero-banner__overlay">
+            <div class="nhsuk-width-container">
+                <div class="his-hero-banner__content">
+                    <div class="his-hero-banner__text">
+                        <h1 class="his-hero-banner__title" id="hero-title-df6fb8b8-9104-40e7-81d4-776f659db981">Improving health and care for <strong>everyone in Scotland</strong></h1>
+                    </div>
+                    <div class="his-hero-banner__action">
+                        <a href="https://www.healthcareimprovementscotland.scot/publications/leading-quality-health-and-care-for-scotland-our-strategy-2023-2028/" 
+                           class="his-hero-banner__button"
+                           aria-label="Our purpose and vision - Improving health and care for everyone in Scotland">
+                            Our purpose and vision                            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" 
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 viewBox="0 0 24 24" 
+                                 aria-hidden="true" 
+                                 focusable="false">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+<div class="wp-block-group  nhsuk-card-group nhsuk-grid-row card-row-margin"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/clinical-guidance-for-professionals/" class="nhsuk-card__link">Clinical guidance for professionals</a></h2><div class="nhsuk-card__description"><p>We are the national authority for the development of evidence-based advice, guidance and standards for health and care professionals</p></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/clinical-guidance-for-professionals/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Clinical guidance for professionals</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+
+
+
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/improving-care/" class="nhsuk-card__link">Improving care</a></h2><div class="nhsuk-card__description"><p>Take a look at our resources and guidance that help improve the quality of health and care in Scotland</p></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/improving-care/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Improving care</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+
+
+
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/" class="nhsuk-card__link">Inspections, reviews and regulation</a></h2><div class="nhsuk-card__description"><p>Find out how our work ensures people get the best quality healthcare</p></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Inspections, reviews and regulation</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+</div></div>
+
+
+
+<h2 class="wp-block-heading">Supporting your healthcare</h2>
+
+
+    <nav class="keeping-informed-block" aria-labelledby="keeping-informed-heading" role="navigation">
+        <h2 id="keeping-informed-heading" class="nhsuk-visually-hidden">Keeping informed on your healthcare links</h2>
+        <ul class="keeping-informed-grid" role="list">
+                        <li role="listitem">
+                <a href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/inspections-of-nhs-hospitals-and-services/hospital-and-services-inspection-reports/" class="keeping-informed-card" 
+                   aria-label="View information about: Read our hospital inspection reports">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                            Read our hospital inspection reports                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                        <li role="listitem">
+                <a href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/regulation-of-independent-healthcare/find-an-independent-healthcare-provider-or-service/" class="keeping-informed-card" 
+                   aria-label="View information about:  Find a registered independent healthcare service">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                             Find a registered independent healthcare service                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                        <li role="listitem">
+                <a href="https://scottishmedicines.org.uk/" class="keeping-informed-card" 
+                   aria-label="View information about: Check if we have approved a medicine for use in Scotland">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                            Check if we have approved a medicine for use in Scotland                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                        <li role="listitem">
+                <a href="https://www.healthcareimprovementscotland.scot/about-us/contact-us/freedom-of-information/" class="keeping-informed-card" 
+                   aria-label="View information about: Make a Freedom of Information request to us">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                            Make a Freedom of Information request to us                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                        <li role="listitem">
+                <a href="https://www.healthcareimprovementscotland.scot/about-us/contact-us/complaints-and-feedback/" class="keeping-informed-card" 
+                   aria-label="View information about: Provide feedback or make a complaint to us">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                            Provide feedback or make a complaint to us                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                        <li role="listitem">
+                <a href="https://www.healthcareimprovementscotland.scot/inspections-reviews-and-regulation/learning-from-adverse-events/support-for-families-and-carers/" class="keeping-informed-card" 
+                   aria-label="View information about: How we learn from adverse events">
+                    <div class="keeping-informed-card__content">
+                        <h3 class="keeping-informed-card__title">
+                            How we learn from adverse events                        </h3>
+                        <svg class="keeping-informed-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                             aria-hidden="true" focusable="false">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+                    </ul>
+    </nav>
+    
+
+
+<h2 class="wp-block-heading">Our news</h2>
+
+
+    <section class="latest-news-block" aria-labelledby="latest-news-heading">
+        <h2 id="latest-news-heading" class="nhsuk-visually-hidden">Latest News</h2>
+        <div class="latest-news-grid" role="list" aria-label="Latest news articles, with featured article first">
+                            <article class="latest-news-card latest-news-card--featured" 
+                         role="listitem" 
+                         aria-label="Featured news article: World Evidence-based Healthcare Day 2026">
+                    <div class="nhsuk-card">
+                        <a href="https://www.healthcareimprovementscotland.scot/publications/world-evidence-based-healthcare-day-2026/" 
+                           class="nhsuk-card__link" 
+                           aria-label="Read Featured news article: World Evidence-based Healthcare Day 2026 (Article 1 of 3)">
+                                                            <div class="nhsuk-card__img" aria-hidden="true">
+                                    <img decoding="async"   src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-1024x683.png" class="attachment-large size-large wp-post-image" alt="A blue and green graphic with the text &#039;World Evidence-Based Healthcare Day 2026 Tuesday 20th October&#039;" srcset="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-1024x683.png 1024w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-300x200.png 300w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-768x512.png 768w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-1536x1024.png 1536w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/2026-10-19-SIGN-EBHD-2026-home-2048x1366.png 2048w" sizes="(max-width: 640px) 100vw, 640px" />                                </div>
+                                                        <div class="nhsuk-card__content">
+                                <h3 class="nhsuk-card__heading">
+                                    World Evidence-based Healthcare Day 2026                                </h3>
+                                                                    <p class="nhsuk-card__description">
+                                        This World Evidence-Based Healthcare Day, Our colleagues at SIGN reflect on the theme of AI and how they have been exploring its use within evidence-based practice.                                      </p>
+                                                                <div class="latest-news-date">
+                                    <time datetime="2026-10-20T10:00:00+01:00">
+                                        20 October 2026                                    </time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                            <article class="latest-news-card latest-news-card--secondary" 
+                         role="listitem" 
+                         aria-label="News article: SIGN colleagues awarded Fellowship of Guidelines International Network">
+                    <div class="nhsuk-card">
+                        <a href="https://www.healthcareimprovementscotland.scot/publications/sign-colleagues-awarded-fellowship-of-guidelines-international-network/" 
+                           class="nhsuk-card__link" 
+                           aria-label="Read News article: SIGN colleagues awarded Fellowship of Guidelines International Network (Article 2 of 3)">
+                                                            <div class="nhsuk-card__img" aria-hidden="true">
+                                    <img decoding="async"   src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/SIGN-GIN-Fellowship-Roberta-James-1024x796.jpg" class="attachment-large size-large wp-post-image" alt="Two people stand in front of a pink wall, which reads &quot;GIN, Guidelines International Network&quot;. They are holding a certificate. On the right is Roberta James, Programme Lead at SIGN" srcset="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/SIGN-GIN-Fellowship-Roberta-James-1024x796.jpg 1024w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/10/SIGN-GIN-Fellowship-Roberta-James-1536x1194.jpg 1536w" sizes="(max-width: 640px) 100vw, 640px" />                                </div>
+                                                        <div class="nhsuk-card__content">
+                                <h3 class="nhsuk-card__heading">
+                                    SIGN colleagues awarded Fellowship of Guidelines International Network                                </h3>
+                                                                    <p class="nhsuk-card__description">
+                                        Two colleagues from Healthcare Improvement Scotland&#039;s Scottish Intercollegiate Guidelines Network (SIGN) have been recognised for their outstanding contribution to international guideline development.                                    </p>
+                                                                <div class="latest-news-date">
+                                    <time datetime="2026-10-07T11:18:30+01:00">
+                                        7 October 2026                                    </time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                            <article class="latest-news-card latest-news-card--secondary" 
+                         role="listitem" 
+                         aria-label="News article: Stronger support for families at the heart of death certification service">
+                    <div class="nhsuk-card">
+                        <a href="https://www.healthcareimprovementscotland.scot/publications/stronger-support-for-families-at-the-heart-of-death-certification-service/" 
+                           class="nhsuk-card__link" 
+                           aria-label="Read News article: Stronger support for families at the heart of death certification service (Article 3 of 3)">
+                                                            <div class="nhsuk-card__img" aria-hidden="true">
+                                    <img decoding="async"   src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/09/DCRS-annual-report-3.png" class="attachment-large size-large wp-post-image" alt="A laptop keyboard has a stethoscope across it, with a form on a clip board beside it." srcset="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/09/DCRS-annual-report-3.png 945w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/09/DCRS-annual-report-3-300x200.png 300w, https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/09/DCRS-annual-report-3-768x512.png 768w" sizes="(max-width: 640px) 100vw, 640px" />                                </div>
+                                                        <div class="nhsuk-card__content">
+                                <h3 class="nhsuk-card__heading">
+                                    Stronger support for families at the heart of death certification service                                </h3>
+                                                                    <p class="nhsuk-card__description">
+                                        The Death Certification Review Service (DCRS) annual report for 2025 &#8211; 2026 published.                                    </p>
+                                                                <div class="latest-news-date">
+                                    <time datetime="2026-09-29T09:31:03+01:00">
+                                        29 September 2026                                    </time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                    </div>
+    </section>
+    
+
+
+<h2 class="wp-block-heading">Our publications</h2>
+
+
+
+<div class="wp-block-group  nhsuk-card-group nhsuk-grid-row card-row-margin"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/publications/gilbert-bain-hospital-nhs-shetland-maternity-safe-delivery-of-care-inspection-report-october-2026/" class="nhsuk-card__link">Gilbert Bain Hospital, NHS Shetland – maternity safe delivery of care inspection report</a></h2><div class="nhsuk-card__description"></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/publications/gilbert-bain-hospital-nhs-shetland-maternity-safe-delivery-of-care-inspection-report-october-2026/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Gilbert Bain Hospital, NHS Shetland – maternity safe delivery of care inspection report</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+
+
+
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/publications/death-certification-review-service-annual-report-2025-2026-september-2026/" class="nhsuk-card__link">Death Certification Review Service – Annual report 2025-2026</a></h2><div class="nhsuk-card__description"></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/publications/death-certification-review-service-annual-report-2025-2026-september-2026/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Death Certification Review Service – Annual report 2025-2026</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+
+
+
+<div class="wp-block-theme-name-nhs-card-v2 nhsuk-grid-column-one-third nhsuk-card-group__item"><div class="nhsuk-card nhsuk-card--clickable"><div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthcareimprovementscotland.scot/publications/urgent-and-unscheduled-care-standards/" class="nhsuk-card__link">Urgent and unscheduled care standards final scope</a></h2><div class="nhsuk-card__description"></div><div class="nhsuk-action-link nhsuk-readmore"><a class="nhsuk-card__link nhsuk-action-link__link" href="https://www.healthcareimprovementscotland.scot/publications/urgent-and-unscheduled-care-standards/"><span class="nhsuk-action-link__text">Read more</span><span class="nhsuk-u-visually-hidden"> about Urgent and unscheduled care standards final scope</span><svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path></svg></a></div></div></div></div>
+</div></div>
+
+
+
+
+
+			</div><!-- .entry-content -->
+	<div class="nhsuk-content__clearfix"></div>
+
+	
+	</article><!-- #post-2 -->
+	</div>
+</div><!-- #primary -->
+
+</div>
+</main>
+</div>
+
+<footer role="contentinfo" aria-labelledby="footer-heading">
+	<div class="nhsuk-footer-container" id="nhsuk-footer">
+		<div class="nhsuk-width-container">
+			<h2 id="footer-heading" class="nhsuk-u-visually-hidden">Footer</h2>
+
+			<!-- Footer Navigation -->
+			<div class="nhsuk-footer nhsuk-footer__main">
+				<div class="nhsuk-footer__row">
+					<!-- Column 1: Navigation Links -->
+					<div class="nhsuk-footer__column nhsuk-footer__column--links">
+						<nav aria-labelledby="footer-nav-heading">
+							<h3 id="footer-nav-heading" class="nhsuk-u-visually-hidden">Footer Navigation Links</h3>
+							
+															<div class="nhsuk-footer__links-group">
+
+									<ul id="menu-footer-one" class="nhsuk-footer__list"><li id="menu-item-23180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23180"><a href="https://www.healthcareimprovementscotland.scot/about-us/">About us</a></li>
+<li id="menu-item-23181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23181"><a href="https://www.healthcareimprovementscotland.scot/about-us/contact-us/">Contact us</a></li>
+<li id="menu-item-23182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23182"><a href="https://www.healthcareimprovementscotland.scot/media-centre/">Media Centre</a></li>
+<li id="menu-item-23183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23183"><a href="https://www.healthcareimprovementscotland.scot/listen-to-the-healthcare-improvement-podcast/">Podcasts</a></li>
+<li id="menu-item-24045" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24045"><a href="https://www.healthcareimprovementscotland.scot/publications/category/event/">Events</a></li>
+</ul>								</div>
+														
+															<div class="nhsuk-footer__links-group">
+									
+									<ul id="menu-footer-two" class="nhsuk-footer__list"><li id="menu-item-23185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23185"><a href="https://www.healthcareimprovementscotland.scot/cookie-policy/how-we-use-cookies/">How we use cookies</a></li>
+<li id="menu-item-23186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23186"><a href="https://www.healthcareimprovementscotland.scot/privacy-policy-how-we-use-your-information/">Our privacy policy</a></li>
+<li id="menu-item-23187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23187"><a href="https://www.healthcareimprovementscotland.scot/accessibility/">Accessibility statement</a></li>
+<li id="menu-item-23188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23188"><a href="https://www.healthcareimprovementscotland.scot/copyright/">Copyright information</a></li>
+<li id="menu-item-23189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23189"><a href="https://www.healthcareimprovementscotland.scot/about-us/contact-us/complaints-and-feedback/">Complaints and feedback</a></li>
+</ul>								</div>
+													</nav>
+					</div>
+					
+					<!-- Column 2: Logo and Copyright -->
+					<div class="nhsuk-footer__column nhsuk-footer__column--branding">
+						<h3 id="footer-org-heading" class="nhsuk-u-visually-hidden">Organization Information</h3>
+												
+													<div class="nhsuk-footer__branding-logo">
+								<a href="https://www.healthcareimprovementscotland.scot/" aria-label="Return to Healthcare Improvement Scotland homepage">
+									<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/cropped-HIS_LOGO_MASTER_RGB-2.png" alt="Footer Logo" />
+								</a>
+							</div>
+												
+						<div class="nhsuk-footer__branding-copyright">
+							<div role="contentinfo">© 2026 Healthcare Improvement Scotland</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Social Media Navigation -->
+						
+							<hr class="nhsuk-footer__divider" aria-hidden="true">
+				<div class="nhsuk-footer nhsuk-footer__social-container">
+					<div >
+						<div class="nhsuk-footer__social">
+							<nav aria-labelledby="footer-social-heading">
+								<h3 id="footer-social-heading" class="nhsuk-u-visually-hidden">Healthcare Improvement Scotland Social Media</h3>
+								<div class="nhsuk-footer__social-content">
+																					<span class="nhsuk-footer__social-text">Follow Healthcare Improvement Scotland</span>
+																				
+										<ul class="nhsuk-footer__social-list" role="list">
+																							<li class="nhsuk-footer__social-item" role="listitem">
+													<a href="https://bsky.app/profile/healthimprovescot.bsky.social" 
+													   target="_blank" 
+													   rel="noopener noreferrer" 
+													   class="nhsuk-footer__social-link"
+													   aria-label="Follow Healthcare Improvement Scotland on Social Media (opens in new tab)">
+														<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/bluesky.png" 
+															 alt="Social Media" 
+															 class="nhsuk-footer__social-icon">
+													</a>
+												</li>
+																							<li class="nhsuk-footer__social-item" role="listitem">
+													<a href="https://www.facebook.com/healthcareimprovementscot/" 
+													   target="_blank" 
+													   rel="noopener noreferrer" 
+													   class="nhsuk-footer__social-link"
+													   aria-label="Follow Healthcare Improvement Scotland on Social Media (opens in new tab)">
+														<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/fb.png" 
+															 alt="Social Media" 
+															 class="nhsuk-footer__social-icon">
+													</a>
+												</li>
+																							<li class="nhsuk-footer__social-item" role="listitem">
+													<a href="https://x.com/online_his" 
+													   target="_blank" 
+													   rel="noopener noreferrer" 
+													   class="nhsuk-footer__social-link"
+													   aria-label="Follow Healthcare Improvement Scotland on Social Media (opens in new tab)">
+														<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/x.png" 
+															 alt="Social Media" 
+															 class="nhsuk-footer__social-icon">
+													</a>
+												</li>
+																							<li class="nhsuk-footer__social-item" role="listitem">
+													<a href="https://www.youtube.com/user/healthimprovescot" 
+													   target="_blank" 
+													   rel="noopener noreferrer" 
+													   class="nhsuk-footer__social-link"
+													   aria-label="Follow Healthcare Improvement Scotland on Social Media (opens in new tab)">
+														<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/yt.png" 
+															 alt="Social Media" 
+															 class="nhsuk-footer__social-icon">
+													</a>
+												</li>
+																							<li class="nhsuk-footer__social-item" role="listitem">
+													<a href="https://uk.linkedin.com/company/healthcare-improvement-scotland" 
+													   target="_blank" 
+													   rel="noopener noreferrer" 
+													   class="nhsuk-footer__social-link"
+													   aria-label="Follow Healthcare Improvement Scotland on Social Media (opens in new tab)">
+														<img src="https://www.healthcareimprovementscotland.scot/wp-content/uploads/2026/03/li.png" 
+															 alt="Social Media" 
+															 class="nhsuk-footer__social-icon">
+													</a>
+												</li>
+																					</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>
+			
+
+
+		</div>
+	</div>
+</footer>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nightingale-child/*","/wp-content/themes/nightingale/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+
+	    const heroBlock = document.querySelector('.wp-block-nhsblocks-heroblock');
+	    const tabbedTabs = document.querySelector( '.nhsuk-bordered-tabs-container' );
+	    if ( ( heroBlock ) ) { 
+	        matches = heroBlock.matches ? heroBlock.matches('.wp-block-nhsblocks-heroblock') : heroBlock.msMatchesSelector('.wp-block-nhsblocks-heroblock');
+		    if ( matches === true ) { 
+				const mainContent = document.querySelector( 'main' );
+			    const contentInner = document.querySelector( '#contentinner' );
+			    const wholeDoc = document.querySelector( 'body' );
+			    const breadCrumb = document.querySelector( '.nhsuk-breadcrumb' );
+			    const articleTitle = document.querySelector( '.entry-header' );
+			    const sectionTitle = wholeDoc.querySelector( '#nhsuk-tabbed-title' );
+			    const tabbedTabs = document.querySelector( '.nhsuk-bordered-tabs-container' );			    
+			    mainContent.insertBefore( heroBlock, contentInner );
+			    articleTitle.style.display = 'none';
+			    mainContent.style.paddingTop = '0';
+			    if ( tabbedTabs ) {
+			    	mainContent.insertBefore( tabbedTabs, contentInner );
+			    	heroBlock.style.borderBottom = '70px solid white';
+			    	heroBlock.style.marginBottom = 'none';
+			    } else {
+			    	heroBlock.style.marginBottom = '70px';
+			    }
+			    if ( breadCrumb ) { 
+			    	wholeDoc.removeChild( breadCrumb );
+			    }
+			    if ( sectionTitle ) { 
+			    	removeElements( document.querySelectorAll('#nhsuk-tabbed-title') );
+			    }
+		    }
+	    } else if ( tabbedTabs ) {
+						const mainContent = document.querySelector( 'main' );
+					    const contentInner = document.querySelector( '#contentinner' );
+					    const wholeDoc = document.querySelector( 'body' );
+					    const breadCrumb = document.querySelector( '.nhsuk-breadcrumb' );
+					    const articleTitle = document.querySelector( '.entry-header' );
+					    const sectionTitle = wholeDoc.querySelector( '#nhsuk-tabbed-title' );
+	        mainContent.insertBefore( tabbedTabs, contentInner );
+	        if ( breadCrumb ) {
+			    	wholeDoc.removeChild( breadCrumb );
+			    }
+			    if ( sectionTitle ) {
+			    	removeElements( document.querySelectorAll( '#nhsuk-tabbed-title' ) );
+			}
+			articleTitle.style.marginTop = '20px';
+			mainContent.style.paddingTop = '0';
+	    }		
+	    // Page Link JS
+	    const careCardWarning = document.querySelector('.nhsuk-care-card.is-style-warning-callout');
+	    if ( ( careCardWarning ) ) {
+	    	const visuallyHidden = careCardWarning.querySelector('.nhsuk-u-visually-hidden');
+	    	jQuery(visuallyHidden).html('Warning advice: ');
+	    }
+	    const careCardUrgent = document.querySelector('.nhsuk-care-card.is-style-urgent');
+	    if ( ( careCardUrgent ) ) {
+	    	const visuallyHidden = careCardUrgent.querySelector('.nhsuk-u-visually-hidden');
+	    	jQuery(visuallyHidden).html('Urgent advice: ');
+	    }
+	    const careCardImmediate = document.querySelector('.nhsuk-care-card.is-style-immediate');
+	    if ( ( careCardImmediate ) ) {
+	    	const visuallyHidden = careCardImmediate.querySelector('.nhsuk-u-visually-hidden');
+	    	jQuery(visuallyHidden).html('Immediate action required: ');
+	    }
+
+	    ( function(){
+	    	let url = window.location.href.split(/[?#]/)[0];
+			let pageList = document.querySelectorAll('.nhsuk-contents-list li.nhsuk-contents-list__item');
+			for (var i = pageList.length - 1; i >= 0; i--) {
+				let nhsList = pageList[i];
+				let link = pageList[i].children[0].href;
+				if( link === url ){
+					let txt = pageList[i].innerText;
+					pageList[i].innerHTML = txt;
+				}
+			}
+		})();
+		// Smooth scroll to link
+		jQuery( document ).ready(function( $ ) {
+		    $('.js-scroll-to').on('click', function(e) {
+		    	e.preventDefault();
+		    	let link = $(this).attr('href');
+			    $('html, body').animate({
+			        scrollTop: $( link ).offset().top - 50
+			    }, 200);
+			});
+		});		
+		</script><script id="nhsblocks-frontend-js" src="https://www.healthcareimprovementscotland.scot/wp-content/plugins/nhsblocks/build/nhsblocks-frontend.min.js?ver=1792016429"></script>
+<script id="publication-search-js-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/publication-search.js"></script>
+<script id="medicines-search-js-js-extra">
+var ajax_params = {"ajax_url":"https://www.healthcareimprovementscotland.scot/wp-admin/admin-ajax.php"};
+//# sourceURL=medicines-search-js-js-extra
+</script>
+<script id="medicines-search-js-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/medicines-search.js"></script>
+<script id="ihub-search-js-js-extra">
+var ajax_params = {"ajax_url":"https://www.healthcareimprovementscotland.scot/wp-admin/admin-ajax.php"};
+//# sourceURL=ihub-search-js-js-extra
+</script>
+<script id="ihub-search-js-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/ihub-search.js"></script>
+<script id="my-custom-javascript-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/custom-javascript.js?ver=1790252367"></script>
+<script id="nhsuk-cookie-banner-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/cookie-banner.js?ver=1790252367"></script>
+<script id="my-enews-subscription-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/enews-subscription.js?ver=1790252367"></script>
+<script id="menu-focus-script-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/menu-focus.js?ver=1790252367"></script>
+<script id="google-maps-api-js" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9kukQBNTT0Z7GpYPz-xB-qyTfxhIunFI&#038;libraries=marker"></script>
+<script id="service-map-script-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale-child/js/service-map.js?ver=1790252367"></script>
+<script id="nightingale-skip-link-focus-fix-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale/js/skip-link-focus-fix.js?ver=2.7.15"></script>
+<script id="nightingale-nhs-library-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale/js/nhsuk.min.js?ver=2.7.15"></script>
+<script id="nightingale-navigation-js" src="https://www.healthcareimprovementscotland.scot/wp-content/themes/nightingale/js/navigation.js?ver=2.7.15"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.healthcareimprovementscotland.scot/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.healthcareimprovementscotland.scot/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
