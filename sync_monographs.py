@@ -10,7 +10,12 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
+    # Neonatology Tree
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
+    # General Paediatric Guidelines Tree
+    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/",
+    # Other Paediatric Guidelines
+    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/other-guidelines/",
 ]
 
 PDF_DIR = "./public/pdfs"
@@ -18,7 +23,7 @@ INDEX_FILE = "./public/search_index.json"
 MANIFEST_FILE = "./manifest.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; GGC-Neonatal-Index-Sync/1.0)"
+    "User-Agent": "Mozilla/5.0 (compatible; GGC-Paediatric-Index-Sync/1.0)"
 }
 
 os.makedirs(PDF_DIR, exist_ok=True)
@@ -88,23 +93,28 @@ def crawl_and_sync():
         dates = extract_editorial_dates(soup)
 
         url_lower = clean_url.lower()
-        if "parenteral" in url_lower:
-            category = "Parenteral"
-        elif "oral" in url_lower:
-            category = "Oral & Other"
-        elif "drug-monographs" in url_lower:
-            category = "Monographs"
+        
+        # Categorization Logic: Separate Neonatal vs Paediatric
+        if "neonatology" in url_lower:
+            if "parenteral" in url_lower:
+                category = "Neonatal IV Monograph"
+            elif "oral" in url_lower:
+                category = "Neonatal Oral / Other"
+            elif "drug-monographs" in url_lower:
+                category = "Neonatal Monograph"
+            else:
+                category = "Neonatal Guideline"
         else:
-            category = "Clinical Guideline"
+            category = "Paediatric Guideline"
 
-        # Find direct PDF links
+        # Find direct PDF links or child guideline pages within the pediatric/neonatal tree
         pdf_links = []
         for a in soup.find_all("a", href=True):
             href = a["href"]
             full_href = urljoin(BASE_URL, href)
             if ".pdf" in full_href.lower() and "/media/" in full_href.lower():
                 pdf_links.append((full_href, a.get_text(strip=True) or page_title))
-            elif full_href.startswith(tuple(u.rstrip("/") for u in START_URLS)):
+            elif full_href.startswith("https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/"):
                 child_clean = full_href.split("?")[0].split("#")[0].rstrip("/")
                 if child_clean not in visited_pages:
                     queue.append(child_clean)
@@ -150,9 +160,11 @@ def crawl_and_sync():
                     "content": extracted_text,
                 }
 
-        # 2. Process HTML Web Guidelines ONLY if it's not a monograph page containing a PDF
+        # 2. Process HTML Web Guidelines (for pages without direct PDFs)
         is_monograph_section = "drug-monographs" in url_lower or "parenteral" in url_lower or "oral" in url_lower
-        if not has_pdf and not is_monograph_section and clean_url not in [u.rstrip("/") for u in START_URLS]:
+        is_root_landing = clean_url in [u.rstrip("/") for u in START_URLS]
+        
+        if not has_pdf and not is_monograph_section and not is_root_landing:
             content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
             
             if content_container:
