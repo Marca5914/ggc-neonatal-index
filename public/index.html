@@ -35,7 +35,7 @@
           id="search-input"
           type="search"
           autocomplete="off"
-          placeholder="Search drug name, complication, compatibilities (e.g. 'gentamicin trough', 'dobutamine extravasation')..."
+          placeholder="Search guideline, drug name, compatibility (e.g. 'respiratory distress', 'gentamicin trough', 'dobutamine')..."
           class="w-full pl-10 pr-20 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
         />
         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,9 +53,9 @@
       <div class="flex flex-wrap items-center justify-between gap-2 mt-3">
         <div class="flex flex-wrap gap-1.5" id="category-filters">
           <button data-cat="ALL" class="cat-btn active px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition">All</button>
-          <button data-cat="Parenteral" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV / Parenteral</button>
-          <button data-cat="Oral & Other" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Oral & Other</button>
-          <button data-cat="Guideline / General" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Guidelines</button>
+          <button data-cat="Clinical Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Guidelines</button>
+          <button data-cat="Parenteral" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV Monographs</button>
+          <button data-cat="Oral & Other" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Oral / Other</button>
         </div>
         <span id="result-count" class="text-xs font-medium text-slate-500"></span>
       </div>
@@ -111,7 +111,7 @@
         syncStatus.textContent = "Index load failed";
         resultsContainer.innerHTML = `
           <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
-            <strong>Unable to load <code>search_index.json</code>.</strong> Run <code>python sync_monographs.py</code> first and serve the <code>./public</code> folder over a local web server (e.g. <code>python -m http.server -d public 8000</code>).
+            <strong>Unable to load <code>search_index.json</code>.</strong> Run <code>python sync_monographs.py</code> first and serve the <code>./public</code> folder over a local web server.
           </div>`;
       }
     }
@@ -132,7 +132,6 @@
         }
       }
 
-      // If fuzzy matched without exact substring, find 4-char prefix
       if (firstMatchIdx === -1) {
         for (const term of terms) {
           if (term.length >= 4) {
@@ -144,7 +143,6 @@
 
       if (firstMatchIdx === -1) return "";
 
-      // Find the nearest preceding [Page X] marker
       const precedingText = content.slice(0, firstMatchIdx);
       const pageMatches = [...precedingText.matchAll(/\[Page\s+(\d+)\]/g)];
       const pageLabel = pageMatches.length ? `Page ${pageMatches[pageMatches.length - 1][1]}` : "";
@@ -153,10 +151,8 @@
       const end = Math.min(content.length, firstMatchIdx + 180);
       let snippet = content.slice(start, end).replace(/\s+/g, " ").trim();
 
-      // Escape HTML before highlighting
       snippet = snippet.replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
 
-      // Highlight matching tokens (or 4-char prefixes for typo tolerance)
       terms.forEach(term => {
         const cleanTerm = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         const pattern = cleanTerm.length >= 5 ? `${cleanTerm.slice(0, 4)}\\w*` : cleanTerm;
@@ -171,7 +167,6 @@
         </div>`;
     }
 
-    // 3. Parse DD/MM/YYYY to check if past Next Review Date
     function isReviewOverdue(dateStr) {
       if (!dateStr) return false;
       const parts = dateStr.split("/");
@@ -180,7 +175,7 @@
       return reviewDate < new Date();
     }
 
-    // 4. Filter & Render Cards
+    // 3. Filter & Render Cards
     function renderResults() {
       const query = searchInput.value.trim();
       clearBtn.classList.toggle("hidden", query.length === 0);
@@ -190,7 +185,6 @@
         matchedDocs = allDocuments;
       } else {
         let searchHits = miniSearch.search(query);
-        // Fallback to OR combination if strict AND returns 0 results
         if (searchHits.length === 0 && query.includes(" ")) {
           searchHits = miniSearch.search(query, { combineWith: "OR" });
         }
@@ -241,7 +235,7 @@
                   ${doc.lastReviewed ? `<span>Reviewed: ${doc.lastReviewed}</span>` : ""}
                   ${doc.nextReview ? `
                     <span class="${overdue ? "text-amber-700 font-semibold" : ""}">
-                      Next Review: ${doc.nextReview}${overdue ? "(Due)" : ""}
+                      Next Review: ${doc.nextReview} ${overdue ? "(Due)" : ""}
                     </span>` : ""}
                   <a href="${doc.sourcePageUrl}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-600 underline">
                     GGC Source Page ↗
@@ -251,56 +245,4 @@
 
               <!-- Direct 1-Click PDF Action -->
               <div class="flex items-center gap-1.5 shrink-0">
-                ${doc.localPdfPath ? `
-                  <a href=".${doc.localPdfPath}" target="_blank" rel="noopener"
-                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg shadow-sm transition">
-                    <span>Open PDF</span>
-                  </a>
-                ` : `
-                  <a href="${doc.sourcePageUrl}" target="_blank" rel="noopener"
-                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold rounded-lg transition">
-                    <span>Web Page</span>
-                  </a>
-                `}
-              </div>
-            </div>
-            ${snippetHtml}
-          </article>
-        `;
-      }).join("");
-    }
-
-    // 5. Event Listeners & Keyboard Shortcuts
-    searchInput.addEventListener("input", renderResults);
-
-    clearBtn.addEventListener("click", () => {
-      searchInput.value = "";
-      searchInput.focus();
-      renderResults();
-    });
-
-    document.addEventListener("keydown", e => {
-      if (e.key === "/" && document.activeElement !== searchInput) {
-        e.preventDefault();
-        searchInput.focus();
-      } else if (e.key === "Escape" && document.activeElement === searchInput) {
-        searchInput.value = "";
-        renderResults();
-      }
-    });
-
-    document.querySelectorAll(".cat-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".cat-btn").forEach(b => {
-          b.className = "cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
-        });
-        btn.className = "cat-btn active px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition";
-        activeCategory = btn.dataset.cat;
-        renderResults();
-      });
-    });
-
-    init();
-  </script>
-</body>
-</html>
+                ${doc.local
