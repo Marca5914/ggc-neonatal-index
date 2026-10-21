@@ -10,10 +10,11 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
-    # Neonatology Guidelines & Monographs Directory
+    # Direct Monograph Directories
+    "http://clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/neonatal-parenteral-drug-monographs",
+    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/neonatal-oral-other-routes-drug-monographs/",
+    # General Neonatology & Paediatric Guidelines
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
-    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/",
-    # General Paediatric Guidelines
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/",
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/other-guidelines/",
 ]
@@ -106,14 +107,13 @@ def crawl_and_sync():
 
         url_lower = clean_url.lower()
         
-        # Categorization Logic: Separate monographs vs neonatology vs paediatrics
-        if "neonatology" in url_lower or "drug-monographs" in url_lower:
-            if "parenteral" in url_lower or "iv" in url_lower:
-                category = "Neonatal IV Monograph"
-            elif "oral" in url_lower:
-                category = "Neonatal Oral Monograph"
-            else:
-                category = "Neonatal Guideline"
+        # Categorization Logic
+        if "parenteral" in url_lower or "iv" in url_lower:
+            category = "Neonatal IV Monograph"
+        elif "oral" in url_lower:
+            category = "Neonatal Oral Monograph"
+        elif "neonatology" in url_lower:
+            category = "Neonatal Guideline"
         else:
             category = "Paediatric Guideline"
 
@@ -125,7 +125,7 @@ def crawl_and_sync():
                 full_href = urljoin(BASE_URL, href)
                 if ".pdf" in full_href.lower() and "/media/" in full_href.lower():
                     pdf_links.append((full_href, a.get_text(strip=True) or page_title))
-                elif full_href.startswith("https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/"):
+                elif "neonatal-parenteral-drug-monographs" in full_href.lower() or "neonatal-oral-other-routes-drug-monographs" in full_href.lower() or full_href.startswith("https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/"):
                     child_clean = full_href.split("?")[0].split("#")[0].rstrip("/")
                     if child_clean not in visited_pages:
                         queue.append(child_clean)
