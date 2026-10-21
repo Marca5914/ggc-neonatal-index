@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GGC Neonatal Monographs & Guidelines</title>
+  <title>GGC Neonatal & Paediatric Guidelines & Monographs</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
   <style>
@@ -24,7 +24,7 @@
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
         <div class="flex items-center gap-2">
           <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-sm">Rx</span>
-          <h1 class="text-lg font-bold tracking-tight text-slate-900">GGC Neonatal Monographs & Guidelines</h1>
+          <h1 class="text-lg font-bold tracking-tight text-slate-900">GGC Neonatal & Paediatric Guidelines</h1>
         </div>
         <span id="sync-status" class="text-xs font-medium text-amber-600">Loading index...</span>
       </div>
@@ -35,7 +35,7 @@
           id="search-input"
           type="search"
           autocomplete="off"
-          placeholder="Search guideline, drug name, compatibility (e.g. 'respiratory distress', 'gentamicin trough')..."
+          placeholder="Search guidelines, drug names, DKA protocol, seizure management..."
           class="w-full pl-10 pr-20 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
         />
         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,9 +53,9 @@
       <div class="flex flex-wrap items-center justify-between gap-2 mt-3">
         <div class="flex flex-wrap gap-1.5" id="category-filters">
           <button data-cat="ALL" class="cat-btn active px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition">All</button>
-          <button data-cat="Clinical Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Guidelines</button>
-          <button data-cat="Parenteral" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV Monographs</button>
-          <button data-cat="Oral & Other" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Oral / Other</button>
+          <button data-cat="Neonatal Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Neonatal Guidelines</button>
+          <button data-cat="Paediatric Guideline" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Paediatric Guidelines</button>
+          <button data-cat="Neonatal IV Monograph" class="cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">IV Monographs</button>
         </div>
         <span id="result-count" class="text-xs font-medium text-slate-500"></span>
       </div>
@@ -83,7 +83,6 @@
 
     async function init() {
       try {
-        // Append timestamp cache-buster so browser never loads stale search_index.json
         const res = await fetch(`./search_index.json?t=${new Date().getTime()}`);
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}: search_index.json not found (Run GitHub Action first)`);
@@ -207,17 +206,17 @@
       if (matchedDocs.length === 0) {
         resultsContainer.innerHTML = `
           <div class="text-center py-12 text-slate-500 text-sm">
-            No monographs or guidelines matched "<strong>${query}</strong>".
+            No guidelines or monographs matched "<strong>${query}</strong>".
           </div>`;
         return;
       }
 
       resultsContainer.innerHTML = matchedDocs.map(doc => {
-        const badgeStyles = doc.category === "Parenteral"
-          ? "bg-rose-100 text-rose-800 border-rose-200"
-          : doc.category === "Oral & Other"
-          ? "bg-emerald-100 text-emerald-800 border-emerald-200"
-          : "bg-indigo-100 text-indigo-800 border-indigo-200";
+        let badgeStyles = "bg-slate-100 text-slate-800 border-slate-200";
+        if (doc.category.includes("IV Monograph")) badgeStyles = "bg-rose-100 text-rose-800 border-rose-200";
+        else if (doc.category.includes("Oral")) badgeStyles = "bg-emerald-100 text-emerald-800 border-emerald-200";
+        else if (doc.category.includes("Neonatal")) badgeStyles = "bg-blue-100 text-blue-800 border-blue-200";
+        else if (doc.category.includes("Paediatric")) badgeStyles = "bg-purple-100 text-purple-800 border-purple-200";
 
         const overdue = isReviewOverdue(doc.nextReview);
         const primaryHref = doc.localPdfPath ? `.${doc.localPdfPath}` : (doc.remotePdfUrl || doc.sourcePageUrl);
