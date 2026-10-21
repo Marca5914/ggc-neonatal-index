@@ -83,9 +83,10 @@
 
     async function init() {
       try {
-        const res = await fetch("./search_index.json");
+        // Append timestamp cache-buster so browser never loads stale search_index.json
+        const res = await fetch(`./search_index.json?t=${new Date().getTime()}`);
         if (!res.ok) {
-          throw new Error(`HTTP ${res.status}: search_index.json not found (Run the GitHub Action first)`);
+          throw new Error(`HTTP ${res.status}: search_index.json not found (Run GitHub Action first)`);
         }
         const data = await res.json();
 
@@ -120,9 +121,6 @@
           <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 leading-relaxed">
             <strong>Failed to load search index:</strong><br/>
             <code>${err.message}</code>
-            <p class="mt-2 text-xs text-red-600">
-              Make sure you have run the GitHub Action at least once so that <code>search_index.json</code> is generated and committed to your repository.
-            </p>
           </div>`;
       }
     }
