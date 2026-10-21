@@ -10,7 +10,6 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
-    # Root Neonatology Guideline & Monograph Directory
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
 ]
 
@@ -38,7 +37,6 @@ def save_manifest(manifest):
 
 
 def extract_editorial_dates(soup):
-    """Extracts 'Last reviewed' and 'Next review date' from the QURIS page."""
     text = soup.get_text(" ", strip=True)
     last_rev = re.search(r"Last reviewed:\s*(\d{2}/\d{2}/\d{4})", text)
     next_rev = re.search(r"Next review date:\s*(\d{2}/\d{2}/\d{4})", text)
@@ -49,7 +47,6 @@ def extract_editorial_dates(soup):
 
 
 def extract_pdf_text(pdf_path):
-    """Extracts full text per page from a local PDF using PyMuPDF."""
     full_text = []
     try:
         with fitz.open(pdf_path) as doc:
@@ -90,7 +87,6 @@ def crawl_and_sync():
         page_title = soup.find("h1").get_text(strip=True) if soup.find("h1") else clean_url.split("/")[-1]
         dates = extract_editorial_dates(soup)
 
-        # Categorize based on URL path context
         url_lower = clean_url.lower()
         if "parenteral" in url_lower:
             category = "Parenteral"
@@ -101,77 +97,82 @@ def crawl_and_sync():
         else:
             category = "Clinical Guideline"
 
-        # 1. Find any direct PDF links on this page (/media/.../*.pdf)
+        # Find direct PDF links
         pdf_links = []
         for a in soup.find_all("a", href=True):
             href = a["href"]
             full_href = urljoin(BASE_URL, href)
             if ".pdf" in full_href.lower() and "/media/" in full_href.lower():
                 pdf_links.append((full_href, a.get_text(strip=True) or page_title))
-            # 2. Queue child pages within the target neonatology hierarchy
             elif full_href.startswith(tuple(u.rstrip("/") for u in START_URLS)):
                 child_clean = full_href.split("?")[0].split("#")[0].rstrip("/")
                 if child_clean not in visited_pages:
                     queue.append(child_clean)
 
-        # Process found PDFs on the current page
-        for pdf_url, link_text in set(pdf_links):
-            url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
-            orig_filename = os.path.basename(urlparse(pdf_url).path)
-            local_filename = f"{url_hash}_{orig_filename}"
-            local_path = os.path.join(PDF_DIR, local_filename)
+        # 1. Process PDFs if present
+        if pdf_links:
+            for pdf_url, link_text in set(pdf_links):
+                url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
+                orig_filename = os.path.basename(urlparse(pdf_url).path)
+                local_filename = f"{url_hash}_{orig_filename}"
+                local_path = os.path.join(PDF_DIR, local_filename)
 
-            if pdf_url in manifest and os.path.exists(local_path):
-                print(f"  [✓] Up to date: {page_title} ({orig_filename})")
-                extracted_text = manifest[pdf_url]["content"]
-            else:
-                print(f"  [↓] Downloading new/updated PDF: {orig_filename}")
-                try:
-                    pdf_resp = session.get(pdf_url, timeout=20)
-                    pdf_resp.raise_for_status()
-                    with open(local_path, "wb") as f:
-                        f.write(pdf_resp.content)
-                    extracted_text = extract_pdf_text(local_path)
-                    manifest[pdf_url] = {
-                        "localFile": local_filename,
-                        "downloadedAt": datetime.utcnow().isoformat(),
-                        "content": extracted_text,
-                    }
-                except Exception as e:
-                    print(f"  [!] Failed to download {pdf_url}: {e}")
-                    continue
+                if pdf_url in manifest and os.path.exists(local_path):
+                    extracted_text = manifest[pdf_url]["content"]
+                else:
+                    try:
+                        pdf_resp = session.get(pdf_url, timeout=20)
+                        pdf_resp.raise_for_status()
+                        with open(local_path, "wb") as f:
+                            f.write(pdf_resp.content)
+                        extracted_text = extract_pdf_text(local_path)
+                        manifest[pdf_url] = {
+                            "localFile": local_filename,
+                            "downloadedAt": datetime.utcnow().isoformat(),
+                            "content": extracted_text,
+                        }
+                    except Exception as e:
+                        print(f"  [!] Failed to download {pdf_url}: {e}")
+                        continue
 
-            documents.append({
-                "id": url_hash,
-                "title": page_title,
-                "linkText": link_text,
-                "category": category,
-                "sourcePageUrl": clean_url,
-                "remotePdfUrl": pdf_url,
-                "localPdfPath": f"/pdfs/{local_filename}",
-                "lastReviewed": dates["lastReviewed"],
-                "nextReview": dates["nextReview"],
-                "content": extracted_text,
-            })
-
-        # Fallback: If a leaf page has inline text guidance instead of a PDF
-        if not pdf_links and clean_url not in [u.rstrip("/") for u in START_URLS]:
-            main_content = soup.find("main") or soup.find("article") or soup.body
-            body_text = main_content.get_text(" ", strip=True) if main_content else ""
-            if len(body_text) > 200:
-                doc_id = hashlib.md5(clean_url.encode()).hexdigest()[:10]
                 documents.append({
-                    "id": doc_id,
+                    "id": url_hash,
                     "title": page_title,
-                    "linkText": "Inline Web Guideline",
+                    "linkText": link_text,
                     "category": category,
                     "sourcePageUrl": clean_url,
-                    "remotePdfUrl": None,
-                    "localPdfPath": None,
+                    "remotePdfUrl": pdf_url,
+                    "localPdfPath": f"/pdfs/{local_filename}",
                     "lastReviewed": dates["lastReviewed"],
                     "nextReview": dates["nextReview"],
-                    "content": body_text,
+                    "content": extracted_text,
                 })
+
+        # 2. Process HTML Web Guidelines (handles hidden accordions/tabs)
+        if clean_url not in [u.rstrip("/") for u in START_URLS]:
+            # Target container holding guideline text
+            content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
+            
+            if content_container:
+                # Extract text, ensuring all hidden tabs/details tags are fully included
+                body_text = content_container.get_text(" ", strip=True)
+                
+                if len(body_text) > 100:
+                    doc_id = hashlib.md5(clean_url.encode()).hexdigest()[:10]
+                    # Avoid duplicate entry if a PDF was already indexed for this page
+                    if not any(d["sourcePageUrl"] == clean_url for d in documents):
+                        documents.append({
+                            "id": doc_id,
+                            "title": page_title,
+                            "linkText": "Web Guideline (Pulldown Sections)",
+                            "category": category,
+                            "sourcePageUrl": clean_url,
+                            "remotePdfUrl": None,
+                            "localPdfPath": None,
+                            "lastReviewed": dates["lastReviewed"],
+                            "nextReview": dates["nextReview"],
+                            "content": body_text,
+                        })
 
     save_manifest(manifest)
     with open(INDEX_FILE, "w", encoding="utf-8") as f:
