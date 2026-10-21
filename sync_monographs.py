@@ -63,7 +63,7 @@ def crawl_and_sync():
     manifest = load_manifest()
     visited_pages = set()
     queue = list(START_URLS)
-    documents = []
+    documents_dict = {}  # Use a dictionary keyed by ID to guarantee uniqueness
 
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -135,7 +135,7 @@ def crawl_and_sync():
                         print(f"  [!] Failed to download {pdf_url}: {e}")
                         continue
 
-                documents.append({
+                documents_dict[url_hash] = {
                     "id": url_hash,
                     "title": page_title,
                     "linkText": link_text,
@@ -146,22 +146,19 @@ def crawl_and_sync():
                     "lastReviewed": dates["lastReviewed"],
                     "nextReview": dates["nextReview"],
                     "content": extracted_text,
-                })
+                }
 
-        # 2. Process HTML Web Guidelines (handles hidden accordions/tabs)
+        # 2. Process HTML Web Guidelines
         if clean_url not in [u.rstrip("/") for u in START_URLS]:
-            # Target container holding guideline text
             content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
             
             if content_container:
-                # Extract text, ensuring all hidden tabs/details tags are fully included
                 body_text = content_container.get_text(" ", strip=True)
                 
                 if len(body_text) > 100:
                     doc_id = hashlib.md5(clean_url.encode()).hexdigest()[:10]
-                    # Avoid duplicate entry if a PDF was already indexed for this page
-                    if not any(d["sourcePageUrl"] == clean_url for d in documents):
-                        documents.append({
+                    if doc_id not in documents_dict:
+                        documents_dict[doc_id] = {
                             "id": doc_id,
                             "title": page_title,
                             "linkText": "Web Guideline (Pulldown Sections)",
@@ -172,8 +169,9 @@ def crawl_and_sync():
                             "lastReviewed": dates["lastReviewed"],
                             "nextReview": dates["nextReview"],
                             "content": body_text,
-                        })
+                        }
 
+    documents = list(documents_dict.values())
     save_manifest(manifest)
     with open(INDEX_FILE, "w", encoding="utf-8") as f:
         json.dump({
@@ -182,7 +180,7 @@ def crawl_and_sync():
             "documents": documents
         }, f, indent=2)
 
-    print(f"\nSync complete! Indexed {len(documents)} documents into {INDEX_FILE}.")
+    print(f"\nSync complete! Indexed {len(documents)} unique documents into {INDEX_FILE}.")
 
 
 if __name__ == "__main__":
