@@ -1,0 +1,450 @@
+
+<!doctype html>
+<html class="no-js" lang="en-gb">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G065P08D7L"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-G065P08D7L');
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>National Infection Prevention and Control Manual: 500 - Server Error</title>
+	<meta name="description" content="Server Error Page">
+	<meta name="keywords" content="National Infection Prevention and Control Manual for Scotland, NHS Scotland, SICPs, TBPs">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="DependencyHandler.axd?s=L2Nzcy9ub3JtYWxpemUuY3NzOy9jc3MvcHVyZS1taW4uY3NzOy9jc3MvbWFpbi5jc3M7L2Nzcy9ncmlkcy1yZXNwb25zaXZlLW1pbi5jc3M7L2Fzc2V0cy9mb250cy9jc3MvZm9udC1hd2Vzb21lLm1pbi5jc3M7L2Nzcy9wcmludC5jc3M7&amp;t=Css&amp;cdv=1241" type="text/css" rel="stylesheet"/>
+
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="manifest" href="/manifest.json" />
+	<style>
+		header .header-cont i {
+			background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDUgMyI+DQo8cGF0aCBmaWxsPSIjMDA2NWJkIiBkPSJtMCwwaDV2M2gtNXoiLz4NCjxwYXRoIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIuNiIgZD0ibTAsMGw1LDNtLTUsMGw1LTMiLz4NCjwvc3ZnPg0K');
+			width: 100%;
+			height: 100%;
+			background-size: 1.2em;
+			display: inline-block;
+			background-repeat: no-repeat;
+		}
+	</style>
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+		<link href="~/css/ie8.css" rel="stylesheet" />
+	   <script>
+		  document.createElement('header');
+		  document.createElement('nav');
+		  document.createElement('footer');
+	   </script>
+	<![endif]-->
+</head>
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<header>
+		<div class="skiptocontent">
+			<a href="#maincontent">Skip To Content</a>
+		</div>
+		<div class="pure-g">
+			<nav class="pure-u-1 pure-menu right pure-menu-horizontal hide-mobile">
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+						<a href="#" id="menuLink1" class="pure-menu-link" aria-haspopup="true">NIPCM Index</a>
+						<ul class="pure-menu-children">
+							<li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/about-the-manual/">About the Manual</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/responsibilities/">Responsibilities</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/chapter-1-standard-infection-control-precautions-sicps/">Chapter 1 - Standard Infection Control Precautions (SICPs)</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/chapter-2-transmission-based-precautions-tbps/">Chapter 2 - Transmission Based Precautions (TBPs)</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/chapter-3-healthcare-infection-incidents-outbreaks-and-data-exceedance/">Chapter 3 - Healthcare Infection Incidents, Outbreaks and Data Exceedance</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/chapter-4-infection-control-in-the-built-environment-and-decontamination/">Chapter 4 - Infection Control in the Built Environment and Decontamination</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/addendum-for-high-consequence-infectious-disease-hcid/">Addendum for High Consequence Infectious Disease (HCID)</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/a-z-pathogens/">A-Z Pathogens</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/glossary/">Glossary</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/appendices/">Appendices</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/resources/">Resources</a>
+    </li>
+    <li class="pure-menu-item pure-menu-link pure-menu-allow-hover">        
+        <a href="/winter-preparedness-campaign-2026-see-whats-changed-share-whats-new-strengthen-your-practice/">Winter Preparedness Campaign 2026:  See what&#39;s changed, share what&#39;s new, strengthen your practice!</a>
+    </li>
+						</ul>
+					</li>
+
+							<li class="pure-menu-item"><a href="/care-home-infection-prevention-and-control-manual-ch-ipcm/" class="pure-menu-link">Care Home IPCM</a></li>
+							<li class="pure-menu-item"><a href="/evidence-and-research/" class="pure-menu-link">Evidence and research </a></li>
+							<li class="pure-menu-item"><a href="/search/" class="pure-menu-link">Search</a></li>
+							<li class="pure-menu-item"><a href="/contact-us/" class="pure-menu-link">Contact us</a></li>
+
+				</ul>			
+                <a href="https://nhsnss.org/"><img src="/images/NHSScotland.png" alt="nss logo" class="nss-logo" /></a>
+			</nav>
+		</div>
+		<div class="pure-g header-cont">
+            <div class="pure-u-1">
+                <h1></h1>
+                <a href="/" class="home">
+                    <img src="/images/tbp.png" alt="Site Logo" />
+                </a>
+                <a href="https://nhsnss.org/"><img src="/images/NHSScotland.png" alt="nss logo" class="nss-logo hide-large f-right" /></a>
+                <p class="title hide-sm">
+                    National Infection Prevention and Control Manual
+                </p>
+            </div>
+		</div>
+		<div class="pure-u-1 show-sm">
+			<p class="title">
+				National Infection Prevention and Control Manual
+			</p>
+		</div>
+	</header>
+    <div class="container">
+        <div class="pure-u-1 index-list" id="index-list">
+            <button id="btnShowIndex" class="pure-button pure-button-primary"><i class="fa fa-bars"></i>Show Menu</button>
+            <nav class="pure-u-1 hidden" id="manual-index">
+                <div class="pure-u-1">
+                    <h2>Index</h2>
+                    <ul class="fa-ul">
+                            <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/about-the-manual/">About the Manual</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/responsibilities/">Responsibilities</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/chapter-1-standard-infection-control-precautions-sicps/">Chapter 1 - Standard Infection Control Precautions (SICPs)</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/chapter-2-transmission-based-precautions-tbps/">Chapter 2 - Transmission Based Precautions (TBPs)</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/chapter-3-healthcare-infection-incidents-outbreaks-and-data-exceedance/">Chapter 3 - Healthcare Infection Incidents, Outbreaks and Data Exceedance</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/chapter-4-infection-control-in-the-built-environment-and-decontamination/">Chapter 4 - Infection Control in the Built Environment and Decontamination</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/addendum-for-high-consequence-infectious-disease-hcid/">Addendum for High Consequence Infectious Disease (HCID)</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/a-z-pathogens/">A-Z Pathogens</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/glossary/">Glossary</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/appendices/">Appendices</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/resources/">Resources</a>
+    </li>
+    <li>
+        <i class="fa-li fa fa-caret-right"></i>
+        <a href="/winter-preparedness-campaign-2026-see-whats-changed-share-whats-new-strengthen-your-practice/">Winter Preparedness Campaign 2026:  See what&#39;s changed, share what&#39;s new, strengthen your practice!</a>
+    </li>
+
+                    </ul>
+                </div>
+                <div class="pure-u-1">
+                    <h2>Menu</h2>
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-caret-right"></i><a href="/">Home</a> </li>
+                        
+                        
+
+
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/campaigns/">Campaigns</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/campaigns/hand-hygiene-day/">Hand hygiene day</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/campaigns/winter-planning/">Winter planning</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-resource-for-respiratory-illness/">Care Home  IPC resource for respiratory illness</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-compendium/">Care Home IPC Compendium</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-resource-for-gastro-intestinal-illness/">Care Home IPC resource for gastro-intestinal illness</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-infection-prevention-and-control-ipc-standards-checklist/">Care Home Infection Prevention and Control (IPC) Standards Checklist</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-webinar-actively-preventing-catheter-associated-urinary-tract-infection-cauti-in-care-homes-3-september-2025/">Care Home IPC Webinar: Actively Preventing Catheter Associated Urinary Tract Infection (CAUTI) in Care Homes - 3 September 2025</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-webinar-scabies-back-to-basics-23-october-2024/">Care Home IPC Webinar: Scabies Back to Basics - 23 October 2024</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-webinar-waste-management-back-to-basics-12-december-2024/">Care Home IPC Webinar: Waste Management Back-to-Basics - 12 December 2024</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/care-home-ipc-webinar-infection-prevention-control-interactive-education-kits-october-2025/">Care Home IPC Webinar: Infection Prevention &amp; Control Interactive Education Kits. October 2025</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/clostridioides-difficile-infection-cdi-daily-actions-checklist/">Clostridioides difficile Infection (CDI) - Daily Actions Checklist</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/clostridioides-difficile-infection-cdi-trigger-tool/">Clostridioides difficile infection (CDI) - trigger tool</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/healthcare-water-systems-associated-organisms-incident-or-outbreak-checklist/">Healthcare Water Systems Associated Organisms Incident or Outbreak Checklist</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/high-consequence-infectious-diseases-hcids/">High Consequence Infectious Diseases (HCIDs)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/information-leaflets/">Information Leaflets</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/information-leaflets-language-translations/">Information Leaflets - language translations</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/">Literature reviews</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/decontamination-and-built-environment/">Decontamination and built environment</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/hand-hygiene/">Hand hygiene</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/incidents-and-outbreaks/">Incidents and outbreaks</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/management-of-care-equipment/">Management of care equipment</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/management-of-the-care-environment/">Management of the care environment</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/patient-management/">Patient management</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/personal-protective-equipment-ppe/">Personal Protective Equipment (PPE)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/literature-reviews/transmission-based-precautions-definitions/">Transmission Based Precautions definitions</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/norovirus-key-steps-to-help-stop-the-spread-of-infection-poster/">Norovirus - key steps to help stop the spread of infection poster</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/outbreak-checklist/">Outbreak Checklist</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/outbreak-reporting-tool-ort/">Outbreak Reporting Tool (ORT)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/point-of-use-pou-water-filters/">Point of use (POU) Water Filters</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-inserting-and-maintaining-a-central-vascular-catheter-cvc/">Quality Improvement Tools (QITs) - Inserting and maintaining a central vascular catheter (CVC)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-inserting-and-maintaining-a-peripheral-vascular-catheter-pvc/">Quality Improvement Tools (QITs) - Inserting and maintaining a peripheral vascular catheter (PVC)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-inserting-and-maintaining-a-urinary-catheter-uc/">Quality Improvement Tools (QITs) - Inserting and maintaining a urinary catheter (UC)</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-patient-needing-a-surgical-procedure/">Quality Improvement Tools (QITs) - Patient needing a surgical procedure</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-person-with-a-known-or-suspected-cdi/">Quality Improvement Tools (QITs) - Person with a known or suspected CDI</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-taking-a-sample-for-blood-culture/">Quality Improvement Tools (QITs) - Taking a sample for blood culture</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/quality-improvement-tools-qits-ventilator-associated-pneumonia-vap-prevention/">Quality Improvement Tools (QITs) - Ventilator Associated Pneumonia (VAP) Prevention</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/respiratory-infections-key-steps-to-stop-the-spread-poster/">Respiratory infections - key steps to stop the spread poster</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/respiratory-symptoms-screening/">Respiratory Symptoms Screening</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/transmission-based-precautions-whats-changed-powerpoint-presentation/">Transmission Based Precautions - What&#39;s changed powerpoint presentation</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/transmission-based-precautions-whats-changed/">Transmission Based Precautions - What&#39;s changed?</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/resources/transmission-based-precautions-frequently-asked-questions/">Transmission Based Precautions - Frequently Asked Questions</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/search/">Search</a>
+        </li>
+        <li>
+            <i class="fa-li fa fa-caret-right"></i>
+            <a href="/contact-us/">Contact us</a>
+        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="maincontent">
+            
+
+
+<h2 class="page-title">
+    <i class="fa "></i>    
+500 - Server Error
+</h2>
+
+
+    <section class="m-breadcrumb pure-u-1">
+        <ul>
+            
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/siteutilities/">SiteUtilities</a></li>
+            
+            <li class="active">500 - Server Error</li>
+        </ul>
+    </section>
+
+<div class="content-container pure-g">
+    <div class="pure-u-1">
+        <p>
+            <p>A system error has occurred, our technical team will be notified of this automatically.</p>
+<p><span>If you wish to highlight this or if you require assistance please <a href="/about/contact-us/" title="Contact Us">contact us</a>.</span></p>
+<p>Sorry for any inconvenience.</p>
+        </p>
+    </div>
+</div>
+        </div>
+        <div class="pure-g">
+            <ul id="social" class="pure-u-1 social-links">
+                <li>Share this page</li>
+                <li><a href="https://twitter.com/intent/tweet?text=Read%20the%20National%20Infection%20Prevention%20and%20Control%20Manual%20https://www.nipcm.hps.scot.nhs.uk/siteutilities/500-server-error/"><i class="fa fa-twitter-square twitter"></i><span class="hidden">Share this page on twitter</span></a></li>
+                <li><a href="http://www.facebook.com/sharer.php?u=https://www.nipcm.hps.scot.nhs.uk/siteutilities/500-server-error/"><i class="fa fa-facebook-square facebook"></i><span class="hidden">Share this page on Facebook</span></a></li>
+                <li><a href="https://plus.google.com/share?url=https://www.nipcm.hps.scot.nhs.uk/siteutilities/500-server-error/"><i class="fa fa-google-plus-square google"></i><span class="hidden">Share this page on Google Plus</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>        
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-3">
+                <ul>
+                            <li>
+                                <a href="/about/contact-us/"><i class="fa fa-envelope-o"></i>Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="/about/print-version/"><i class="fa fa-print"></i>Print Version</a>
+                            </li>
+
+                </ul>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-3">
+                <ul>
+                            <li>
+                                <a href="/about/accessibility/"><i class="fa fa-users"></i>Accessibility</a>
+                            </li>
+                            <li>
+                                <a href="/about/copyright/"><i class="fa fa-copyright"></i>Copyright</a>
+                            </li>
+                            <li>
+                                <a href="/about/disclaimer/"><i class="fa fa-exclamation-triangle"></i>Disclaimer</a>
+                            </li>
+                            <li>
+                                <a href="/about/privacy/"><i class="fa fa-lock"></i>Privacy</a>
+                            </li>
+
+                </ul>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-3 parent-org" >
+                <a href="https://publicservicesdelivery.scot/" target="_blank"><img src="/images/PSD-Scotland-White.svg" alt="PSD Scotland Logo"></a>
+            </div>
+        </div>       
+    </footer>    
+</body>
+<script src="/scripts/site.js"></script>
+<script src="/scripts/menu.js"></script>
+</html>

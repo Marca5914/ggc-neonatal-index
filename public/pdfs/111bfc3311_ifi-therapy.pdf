@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]><html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]><html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="ie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="gt-ie9 no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+<link rel="canonical" href="https://mycology.adelaide.edu.au/" />
+<link rel="shortlink" href="https://mycology.adelaide.edu.au/" />
+<meta property="og:site_name" content="Mycology | Adelaide University" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mycology.adelaide.edu.au/home" />
+<meta property="og:title" content="Home" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@uniofadelaide" />
+<meta name="twitter:title" content="https://mycology.adelaide.edu.au/home" />
+<meta name="twitter:image" content="https://global.adelaide.edu.au/v/redesign1/images/logo/ui-uoa-logo-horz.jpg" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?tn6lre" defer></script>
+
+  <title>Mycology | Adelaide University</title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_4ex1Z4t6iS0dp_ynzG_gB8BJBhEfj3ejl2p0FgpW6Vk.css?delta=0&amp;language=en&amp;theme=ua_foundation&amp;include=eJxdjVEKwyAQRC8k8Uiy6jZK1ZUd9yM9fQshhObvvRmYIQurcGefDEu6o8tzxXKpEXD4SOCLOwO0M1wSZT9EO7X6YTdJaVeaBT6rTWrbnWw2psVWUTg7HFjcz02j8BIbmVaV4c-HX6L90dz4KP4sxCbpjZCAL4FpVPQ" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_gK4CnuGvrkPnN4-ZzjBJ4WpfY11Xr-aRbvxT_skJj3o.css?delta=1&amp;language=en&amp;theme=ua_foundation&amp;include=eJxdjVEKwyAQRC8k8Uiy6jZK1ZUd9yM9fQshhObvvRmYIQurcGefDEu6o8tzxXKpEXD4SOCLOwO0M1wSZT9EO7X6YTdJaVeaBT6rTWrbnWw2psVWUTg7HFjcz02j8BIbmVaV4c-HX6L90dz4KP4sxCbpjZCAL4FpVPQ" />
+
+  
+  <link rel="shortcut icon" href="/themes/contrib/ua_foundation/dist/img/icons/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/themes/contrib/ua_foundation/dist/img/icons/apple-touch-icon-144-precomposed.png" />
+</head>
+<body class="path-frontpage node--type-ua-page ua-foundation--au">
+  <a href="#ua-main-content" class="c-skip-to-content">Skip to main content</a>
+
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT5SCSP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><style>
+p .c-btn {
+    margin-bottom: 10px;
+}
+</style>
+          <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="o-off-canvas__wrapper">
+
+      <!-- SEARCH -->
+    
+  
+  <div class="o-off-canvas__content">
+
+          <!-- HEADER -->
+              <div id="au-header-dynamic"></div>
+          
+
+          <!-- MAIN -->
+      <main class="o-layout__main">
+        <!-- SITE TITLE CONTAINER -->
+        <div  class="region region-banner o-layout__slider-container">
+  
+<div id="block-sitebannerblock" class="block block-ua-foundation-blocks block-site-banner-block o-layout__slider" data-irxtracking-link-category-group="Banner zone">
+  
+  
+      
+<div class="c-vegas-slider__container">
+      <div class="c-vegas-slider js-vegas-slider" data-vegas-slides='[{&quot;src&quot;:&quot;\/sites\/default\/files\/media\/banner-images\/2021-10\/nana.jpg&quot;},{&quot;src&quot;:&quot;\/sites\/default\/files\/media\/banner-images\/2021-05\/bipolaris1-banner.jpg&quot;},{&quot;src&quot;:&quot;\/sites\/default\/files\/media\/banner-images\/2021-10\/fusarium_0.jpg&quot;},{&quot;src&quot;:&quot;\/sites\/default\/files\/media\/banner-images\/2021-10\/pitomyces.jpg&quot;},{&quot;src&quot;:&quot;\/sites\/default\/files\/media\/banner-images\/2021-10\/zygo2.jpg&quot;}]'></div>
+  </div>
+
+  </div>
+<div id="block-sitetitle" class="block block-ua-foundation-blocks block-ua-foundation-site-title-block">
+  
+    
+      <div class="o-layout__page-title">
+  <div class="o-layout__container">
+    <div class="c-page-title">
+              <div class="c-page-title__right">
+          <div class="c-page-title__title-bar" data-hide-for="large">
+            <div class="c-page-title__title-bar-right">
+                              <button class="c-page-title__title-bar-menu-icon" type="button" data-toggle="ua-site-menu"><i class="ua-hamburger-icon"></i></button>
+                          </div>
+          </div>
+        </div>
+            <div class="c-page-title__left">
+        
+        <p class="c-page-title__heading"><a href="/">Mycology</a></p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+
+
+                  <!-- MAIN CONTENT CONTAINER -->
+          <div  class="o-layout__container">
+            <!-- SITE MENU CONTAINER -->
+            
+                          <div class="o-layout__main-nav">
+                  <div class="region region-primary-menu">
+    
+<nav role="navigation" data-off-canvas id="ua-site-menu"  class="block block-menu navigation menu--site-menu c-site-menu__container js-site-menu js-site-menu-offcanvas">
+            
+  <h2 class="visually-hidden" id="block-sitemenu-menu">Site Menu</h2>
+  
+
+        
+                    <ul class="c-site-menu" data-accordion-menu data-submenu-toggle="true" data-irxtracking-link-category-group="Site menu">
+                  <li class="menu-item menu-item--active-trail c-site-menu__item is-current">
+        <a href="/index%2Ephp/" data-drupal-link-system-path="&lt;front&gt;" class="is-active" aria-current="page">Home</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/about-us" data-drupal-link-system-path="node/6">About Us</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/national-mycology-reference-centre" data-drupal-link-system-path="node/9">National Mycology Reference Centre</a>
+              </li>
+                <li class="menu-item menu-item--expanded c-site-menu__item is-accordion-submenu-parent has-submenu-toggle">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility" data-drupal-link-system-path="node/12">Fungal Descriptions and Antifungal Susceptibility</a>
+                                      <ul class="c-site-menu__submenu submenu">
+                      <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/alphabetical-index" data-drupal-link-system-path="node/342">Alphabetical Index</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/hyphomycetes-conidial-moulds" data-drupal-link-system-path="node/15">Hyphomycetes (conidial moulds)</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/dimorphic-fungal-pathogens" data-drupal-link-system-path="node/189">Dimorphic Fungal Pathogens</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/dermatophytes" data-drupal-link-system-path="node/192">Dermatophytes</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/coelomycetes" data-drupal-link-system-path="node/216">Coelomycetes</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/entomophthoromycota" data-drupal-link-system-path="node/795">Entomophthoromycota</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/mucoromycota-pin-moulds" data-drupal-link-system-path="node/240">Mucoromycota (Pin Moulds)</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/pythium-oomycota" data-drupal-link-system-path="node/234">Pythium (Oomycota)</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/ascomycota" data-drupal-link-system-path="node/228">Ascomycota</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/schizophyllum-basidiomycota" data-drupal-link-system-path="node/231">Schizophyllum (Basidiomycota)</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/yeast-like-fungi" data-drupal-link-system-path="node/279">Yeast-like Fungi</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/fungal-descriptions-and-antifungal-susceptibility/prototheca-algae" data-drupal-link-system-path="node/237">Prototheca (Algae)</a>
+              </li>
+      </ul>
+    
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mould-identification-a-virtual-self-assessment" data-drupal-link-system-path="node/117">Mould Identification: A Virtual Self Assessment</a>
+              </li>
+                <li class="menu-item menu-item--expanded c-site-menu__item is-accordion-submenu-parent has-submenu-toggle">
+        <a href="/index%2Ephp/mycoses" data-drupal-link-system-path="node/285">Mycoses</a>
+                                      <ul class="c-site-menu__submenu submenu">
+                      <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mycoses/superficial-mycoses" data-drupal-link-system-path="node/393">Superficial Mycoses</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mycoses/cutaneous-mycoses" data-drupal-link-system-path="node/396">Cutaneous Mycoses</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mycoses/subcutaneous-mycoses" data-drupal-link-system-path="node/399">Subcutaneous Mycoses</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mycoses/dimorphic-systemic-mycoses" data-drupal-link-system-path="node/402">Dimorphic Systemic Mycoses</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/mycoses/opportunistic-systemic-mycoses" data-drupal-link-system-path="node/405">Opportunistic Systemic Mycoses</a>
+              </li>
+      </ul>
+    
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/guidelines-for-antifungal-therapy" data-drupal-link-system-path="node/471">Guidelines for Antifungal Therapy</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/laboratory-methods" data-drupal-link-system-path="node/468">Laboratory Methods</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/external-links" data-drupal-link-system-path="node/120">External Links</a>
+              </li>
+                <li class="menu-item c-site-menu__item">
+        <a href="/index%2Ephp/glossary" data-drupal-link-system-path="node/111">Glossary</a>
+              </li>
+      </ul>
+    
+
+
+    <button class="c-site-menu__close-button" data-close>Site menu <span aira-hidden="true">×</span></button>
+</nav>
+
+  </div>
+
+              </div>
+            
+            <!-- PAGE CONTENT CONTAINER -->
+            <article class="o-layout__main-content" id="ua-main-content" role="main">
+                <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-sitelogin" class="block block-ua-foundation-blocks block-ua-foundation-site-auth-login">
+          <div class="c-login">
+    <a href="/user/login/openid_connect?destination=/" class="c-login__link"><i class="fa fa-sign-in"></i> Login</a>
+  </div>
+
+  </div>
+<div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+          <nav aria-label="You are here" role="navigation">
+    <ul class="c-breadcrumbs">
+              <li>
+                                <a href="https://www.adelaide.edu.au/">Home</a>
+                  </li>
+              <li>
+                        <span class="c-breadcrumbs--hidden">Current: </span>
+                                Mycology
+                  </li>
+          </ul>
+  </nav>
+
+  </div>
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+          <div class="u-hidden-h1"><h1>Home</h1></div>
+
+
+<div class="o-layout__content-row">
+        <div class="o-layout__content-column-full">
+          
+
+
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item"><h2 id="welcome-to-mycology-online">Welcome to Mycology Online</h2>
+
+<p class="u-lead-text">Since 1998, Mycology Online has been providing&nbsp;information on the identification and management of human and animal fungal infections.&nbsp;The site provides a range of educational materials including a mould identification self assessment module, descriptions of fungal pathogens and diseases, antifungal susceptibility data, synoptic identification keys for moulds and links to societies and to other mycology sites.</p></div>
+      
+      </div>
+
+        <div class="o-layout__content-column-full">
+          <div class="c-media-object__row is-stacked has-three-columns ">
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/fungal-descriptions-and-antifungal-susceptibility" class="c-media-object__image-link" title="Medically important fungi and antifungal susceptibility profiles - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Medically important fungi and antifungal susceptibility profiles</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2025-11/conidia3.jpg?h=c4dd2c7b&amp;itok=zMSgTMqA" width="1166" height="875" alt="conidia3" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/human-pathogenic-moulds" class="c-media-object__image-link" title="Synoptic mould identification keys - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Synoptic mould identification keys</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2025-04/lucid.jpg?h=c4dd2c7b&amp;itok=cBhRnCfT" width="1166" height="875" alt="Lucid Keys" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/mould-identification-a-virtual-self-assessment" class="c-media-object__image-link" title="Mould identification self assessment - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Mould identification self assessment</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2021-10/scedo-syn.jpg?h=c4dd2c7b&amp;itok=zS9d14Yx" width="1166" height="875" alt="Scedosporium" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+  </div>
+
+      </div>
+
+        <div class="o-layout__content-column-full">
+          <div class="c-media-object__row is-stacked has-four-columns ">
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/mycology-masterclass" class="c-media-object__image-link" title="Mycology Masterclass - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Mycology Masterclass</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2023-07/mmc2011_0.jpg?h=c4dd2c7b&amp;itok=7t7qrtZu" width="1166" height="875" alt="Mycology Masterclass" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/mycoses" class="c-media-object__image-link" title="Human fungal infections - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Human fungal infections</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2021-09/onycho1_0.jpg?h=c4dd2c7b&amp;itok=5lLJ10j3" width="1166" height="875" alt="Tinea of the toe nails caused by T. rubrum." loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/fungal-susceptibility-app" class="c-media-object__image-link" title="Antifungal susceptibility - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Antifungal susceptibility</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2022-09/phoneapp.jpg?h=6eb229a4&amp;itok=LACaLBcc" width="1166" height="875" alt="mobile phone app" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/education-resources" class="c-media-object__image-link" title="Educational resources - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Educational resources</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2023-01/dom22.jpg?h=c4dd2c7b&amp;itok=J0901LFs" width="1166" height="875" alt="Educational resources" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+  </div>
+
+      </div>
+
+        <div class="o-layout__content-column-full">
+          <div class="c-media-object__row is-stacked has-four-columns ">
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/laboratory-methods" class="c-media-object__image-link" title="Laboratory methods - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Laboratory methods</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2021-09/lab-methods.jpg?h=c4dd2c7b&amp;itok=R2CUy_2Q" width="1166" height="875" alt="Laboratory Methods" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/national-mycology-reference-centre" class="c-media-object__image-link" title="National Mycology Reference Centre - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">National Mycology Reference Centre</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2021-09/assessment.jpg?h=c4dd2c7b&amp;itok=rVJkv7Yu" width="1166" height="875" alt="National Mycology Reference Centre" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="https://www.isham.org" class="c-media-object__image-link" title="Become a member - image">
+                      <div class="c-media-object__tag">
+              <p>Quick links</p>
+            </div>
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Become a member</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2021-09/isham.jpg?h=c4dd2c7b&amp;itok=UZrtgX_e" width="1166" height="875" alt="Become a Member" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+      <section class="c-media-object__column">
+  <div class="c-media-object" data-equalizer-watch>
+    <div class="c-media-object__section">
+      <div class="c-media-object__image-wrapper">
+        <a href="/quick-links" class="c-media-object__image-link" title="Quick links - image">
+                                <div class="c-media-object__title">
+              <h2 class="c-media-object__heading">Quick links</h2>
+            </div>
+                      <img src="/sites/default/files/styles/ua_landscape/public/media/images/2022-10/quick-links2.jpg?h=c4dd2c7b&amp;itok=923LucXl" width="1166" height="875" alt="Quick links" loading="lazy" class="image-style-ua-landscape" />
+
+
+
+        </a>
+      </div>
+    </div>
+      </div>
+</section>
+
+  </div>
+
+      </div>
+
+        <div class="o-layout__content-column-full">
+          
+
+
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item"><p><strong><a class="c-btn c-btn--hollow c-btn--default-width c-btn--large" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5b37f4f0-7a89-470a-a02d-fe8b4d0d53cd" href="/about-us" title="About Us">About us&nbsp;</a>&nbsp;&nbsp;</strong><strong><a class="c-btn c-btn--hollow c-btn--default-width c-btn--large" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="ccae17f0-a128-421d-99ce-712fa2a07931" href="/fungal-descriptions-and-antifungal-susceptibility/name-changes-for-medical-fungi" title="Name Changes for Medical Fungi">Recent name changes for medical fungi.</a>&nbsp;&nbsp;</strong><strong>&nbsp;<a class="c-btn c-btn--hollow c-btn--default-width c-btn--large" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b92811f4-bfe5-461e-84e2-32728ae883a7" href="/guidelines-for-antifungal-therapy" title="Guidelines for Diagnosis and Management of Fungal Infections">Guidelines for antifungal therapy</a>&nbsp;&nbsp;<a class="c-btn c-btn--hollow c-btn--default-width c-btn--large" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="f25735aa-f660-42d2-8ce5-97997153f681" href="/glossary" title="Glossary of Mycological Terms">Glossary</a></strong>&nbsp;</p></div>
+      
+      </div>
+
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+            </article>
+
+          </div>
+        
+      </main>
+    
+          <!-- LOCAL FOOTER -->
+              <footer class="o-layout__local-footer">
+          <div class="o-layout__container">
+            <div class="c-local-footer" data-irxtracking-link-category-group="Local footer">
+              <div class="c-local-footer__container">
+                <section  class="is-first-column region region-local-footer-first c-local-footer__column">
+  
+<div id="block-localfootertitleblock" class="block block-block-content block-block-content79c8a102-cd2e-43a9-b60a-e89117e08c19">
+  
+  
+        
+
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="u-lead-text">Mycology Online</p>
+
+<p><a href="https://sciences.adelaide.edu.au/biological-sciences/">School of Biological Sciences</a></p></div>
+      
+  </div>
+
+</section>
+
+
+                <section  class="is-second-column region region-local-footer-second c-local-footer__column">
+  
+<div id="block-localfooteraddressblock" class="block block-block-content block-block-content57b4c42b-a7bc-4af7-91c3-4b76fa8481fd">
+  
+  
+          <h4  class="field field--name-field-ua-lf-basic-title field--type-string field--label-hidden c-local-footer__title">Address</h4>
+
+
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>ADELAIDE UNIVERSITY<br>
+5005 AUSTRALIA</p>
+
+<p><strong>Contact</strong><br>
+Dr David Ellis<br>
+<a href="mailto:david.h.ellis@adelaide.edu.au">Email</a></p></div>
+      
+  </div>
+
+</section>
+
+
+                <section  class="is-third-column region region-local-footer-third c-local-footer__column">
+  
+<div id="block-localfooterdisclaimerblock" class="block block-block-content block-block-contentb1fd77dc-591b-4a2d-b147-95770a533048">
+  
+  
+          <h4  class="field field--name-field-ua-lf-basic-title field--type-string field--label-hidden c-local-footer__title">Disclaimer</h4>
+
+
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="u-small-text">Mycology Online does not provide patient consultations or referrals. Individuals with concerns about fungal infection should seek advice from a registered healthcare professional. Information is provided for education and scientific purposes only and is not intended to replace advice from a registered healthcare professional. Information about a service, product or treatment does not imply endorsement.</p></div>
+      
+  </div>
+
+</section>
+
+
+                <section  class="is-fourth-column region region-local-footer-fourth c-local-footer__column">
+  
+<div id="block-localfootercopyrightblock" class="block block-block-content block-block-content1f01d40f-d4e2-4be8-9ae4-3f2cd839b819">
+  
+  
+          <h4  class="field field--name-field-ua-lf-basic-title field--type-string field--label-hidden c-local-footer__title">Copyright</h4>
+
+
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="u-small-text">Except where an image is attributed to a third party, the images on this website are licensed by Adelaide University under the Creative Commons [Attribution-NonCommercial CC BY-NC] Licence.</p>
+
+<p class="u-small-text"><br>
+<a class="c-btn c-btn--hollow c-btn--default-width c-btn--default-type" href="http://creativecommons.org/licenses/by-nc/4.0/deed.en">View licence Deed</a>&nbsp;</p>
+
+<p class="u-small-text"><a class="c-btn c-btn--hollow c-btn--default-width c-btn--default-type" href="https://creativecommons.org/licenses/by-nc/4.0/legalcode">View legal code</a></p></div>
+      
+  </div>
+
+</section>
+
+
+              </div>
+            </div>
+          </div>
+        </footer>
+          
+          <!-- GLOBAL FOOTER -->
+              <div id="au-footer-dynamic"></div>
+          
+  </div>
+</div>
+
+  </div>
+
+        <style>
+.c-page-title {
+  background-color: rgb(20, 15, 80);
+}
+ 
+@media print, screen and (min-width: 64em) {
+  .c-page-title {
+    background-color: rgba(20, 15, 80, 0.8);
+  }
+}
+</style>
+  
+  <p class="c-back-top js-back-top">
+    <a href="#ua-top" title="Back to top" class="c-btn js-smooth-scroll"><i class="fa fa-angle-up"></i> top</a>
+  </p>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"au_foundation_subtheme":{"auThemePath":"themes\/contrib\/au_theme"},"au_theme":{"theme_path":"\/themes\/contrib\/au_theme"},"csp":{"nonce":"i7Y7xhYdWoxTNId-dW20hw"},"user":{"uid":0,"permissionsHash":"f4f8d72ff35096f338767717947a14219421b81284196bfe081dc14db0ac2cd5"}}</script>
+<script src="/sites/default/files/js/js_vEOrKNmhWgcuyIJ_iozZ26_MN1G30n7mcFVSYRDFcic.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ua_foundation&amp;include=eJxLLI0vyUjNTdVPLi0uyc_VSYTxUzKLS3RKE-PT8kvzUhJLMvPz9NNz8pMSc9AEi3MyU1KLAOqHG-w"></script>
+
+</body>
+</html>
