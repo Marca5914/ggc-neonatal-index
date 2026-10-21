@@ -10,10 +10,10 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
-    # Direct Monograph Directories
-    "http://clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/neonatal-parenteral-drug-monographs",
+    # Explicit Individual Monograph Hubs (ensures every single drug page is reached)
+    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/neonatal-parenteral-drug-monographs/",
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/neonatal-oral-other-routes-drug-monographs/",
-    # General Neonatology & Paediatric Guidelines
+    # General Guidelines
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/",
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/other-guidelines/",
@@ -108,7 +108,7 @@ def crawl_and_sync():
         url_lower = clean_url.lower()
         
         # Categorization Logic
-        if "parenteral" in url_lower or "iv" in url_lower:
+        if "parenteral" in url_lower:
             category = "Neonatal IV Monograph"
         elif "oral" in url_lower:
             category = "Neonatal Oral Monograph"
@@ -172,11 +172,11 @@ def crawl_and_sync():
                 except Exception as e:
                     print(f"  [!] Failed processing PDF {pdf_url}: {e}")
 
-        # 2. Process HTML Web Guidelines (skip monograph container landing pages)
-        is_monograph_section = "drug-monographs" in url_lower or "parenteral" in url_lower or "oral" in url_lower
+        # 2. Process HTML Web Guidelines (skip monograph container hubs)
+        is_monograph_hub = clean_url.endswith("neonatal-parenteral-drug-monographs") or clean_url.endswith("neonatal-oral-other-routes-drug-monographs")
         is_root_landing = clean_url in [u.rstrip("/") for u in START_URLS]
         
-        if not has_pdf and not is_monograph_section and not is_root_landing:
+        if not has_pdf and not is_monograph_hub and not is_root_landing:
             try:
                 content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
                 if content_container:
@@ -187,7 +187,7 @@ def crawl_and_sync():
                             documents_dict[doc_id] = {
                                 "id": doc_id,
                                 "title": page_title,
-                                "linkText": "Web Guideline (Accordion/Pulldown)",
+                                "linkText": "Web Guideline",
                                 "category": category,
                                 "sourcePageUrl": clean_url,
                                 "remotePdfUrl": None,
