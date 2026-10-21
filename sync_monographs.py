@@ -10,11 +10,8 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
-    # Neonatology Tree
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
-    # General Paediatric Guidelines Tree
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/",
-    # Other Paediatric Guidelines
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/other-guidelines/",
 ]
 
@@ -31,8 +28,11 @@ os.makedirs(PDF_DIR, exist_ok=True)
 
 def load_manifest():
     if os.path.exists(MANIFEST_FILE):
-        with open(MANIFEST_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(MANIFEST_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
     return {}
 
 
@@ -42,13 +42,16 @@ def save_manifest(manifest):
 
 
 def extract_editorial_dates(soup):
-    text = soup.get_text(" ", strip=True)
-    last_rev = re.search(r"Last reviewed:\s*(\d{2}/\d{2}/\d{4})", text)
-    next_rev = re.search(r"Next review date:\s*(\d{2}/\d{2}/\d{4})", text)
-    return {
-        "lastReviewed": last_rev.group(1) if last_rev else None,
-        "nextReview": next_rev.group(1) if next_rev else None,
-    }
+    try:
+        text = soup.get_text(" ", strip=True)
+        last_rev = re.search(r"Last reviewed:\s*(\d{2}/\d{2}/\d{4})", text)
+        next_rev = re.search(r"Next review date:\s*(\d{2}/\d{2}/\d{4})", text)
+        return {
+            "lastReviewed": last_rev.group(1) if last_rev else None,
+            "nextReview": next_rev.group(1) if next_rev else None,
+        }
+    except Exception:
+        return {"lastReviewed": None, "nextReview": None}
 
 
 def extract_pdf_text(pdf_path):
@@ -83,18 +86,25 @@ def crawl_and_sync():
         print(f"Scanning: {clean_url}")
         try:
             resp = session.get(current_url, timeout=15)
-            resp.raise_for_status()
+            if resp.status_code != 200:
+                print(f"  [!] Skipped {clean_url}: HTTP status {resp.status_code}")
+                continue
         except Exception as e:
-            print(f"  [!] Error fetching {current_url}: {e}")
+            print(f"  [!] Error fetching {clean_url}: {e}")
             continue
 
-        soup = BeautifulSoup(resp.text, "html.parser")
-        page_title = soup.find("h1").get_text(strip=True) if soup.find("h1") else clean_url.split("/")[-1]
-        dates = extract_editorial_dates(soup)
+        try:
+            soup = BeautifulSoup(resp.text, "html.parser")
+            h1 = soup.find("h1")
+            page_title = h1.get_text(strip=True) if h1 else clean_url.split("/")[-1]
+            dates = extract_editorial_dates(soup)
+        except Exception as e:
+            print(f"  [!] Error parsing HTML for {clean_url}: {e}")
+            continue
 
         url_lower = clean_url.lower()
         
-        # Categorization Logic: Separate Neonatal vs Paediatric
+        # Categorization Logic
         if "neonatology" in url_lower:
             if "parenteral" in url_lower:
                 category = "Neonatal IV Monograph"
@@ -107,32 +117,35 @@ def crawl_and_sync():
         else:
             category = "Paediatric Guideline"
 
-        # Find direct PDF links or child guideline pages within the pediatric/neonatal tree
+        # Find direct PDF links or valid internal links
         pdf_links = []
         for a in soup.find_all("a", href=True):
-            href = a["href"]
-            full_href = urljoin(BASE_URL, href)
-            if ".pdf" in full_href.lower() and "/media/" in full_href.lower():
-                pdf_links.append((full_href, a.get_text(strip=True) or page_title))
-            elif full_href.startswith("https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/"):
-                child_clean = full_href.split("?")[0].split("#")[0].rstrip("/")
-                if child_clean not in visited_pages:
-                    queue.append(child_clean)
+            try:
+                href = a["href"]
+                full_href = urljoin(BASE_URL, href)
+                if ".pdf" in full_href.lower() and "/media/" in full_href.lower():
+                    pdf_links.append((full_href, a.get_text(strip=True) or page_title))
+                elif full_href.startswith("https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/"):
+                    child_clean = full_href.split("?")[0].split("#")[0].rstrip("/")
+                    if child_clean not in visited_pages:
+                        queue.append(child_clean)
+            except Exception:
+                continue
 
         # 1. Process PDFs if present
         has_pdf = False
         if pdf_links:
             has_pdf = True
             for pdf_url, link_text in set(pdf_links):
-                url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
-                orig_filename = os.path.basename(urlparse(pdf_url).path)
-                local_filename = f"{url_hash}_{orig_filename}"
-                local_path = os.path.join(PDF_DIR, local_filename)
+                try:
+                    url_hash = hashlib.md5(pdf_url.encode()).hexdigest()[:10]
+                    orig_filename = os.path.basename(urlparse(pdf_url).path)
+                    local_filename = f"{url_hash}_{orig_filename}"
+                    local_path = os.path.join(PDF_DIR, local_filename)
 
-                if pdf_url in manifest and os.path.exists(local_path):
-                    extracted_text = manifest[pdf_url]["content"]
-                else:
-                    try:
+                    if pdf_url in manifest and os.path.exists(local_path):
+                        extracted_text = manifest[pdf_url]["content"]
+                    else:
                         pdf_resp = session.get(pdf_url, timeout=20)
                         pdf_resp.raise_for_status()
                         with open(local_path, "wb") as f:
@@ -143,48 +156,48 @@ def crawl_and_sync():
                             "downloadedAt": datetime.utcnow().isoformat(),
                             "content": extracted_text,
                         }
-                    except Exception as e:
-                        print(f"  [!] Failed to download {pdf_url}: {e}")
-                        continue
 
-                documents_dict[url_hash] = {
-                    "id": url_hash,
-                    "title": page_title,
-                    "linkText": link_text,
-                    "category": category,
-                    "sourcePageUrl": clean_url,
-                    "remotePdfUrl": pdf_url,
-                    "localPdfPath": f"/pdfs/{local_filename}",
-                    "lastReviewed": dates["lastReviewed"],
-                    "nextReview": dates["nextReview"],
-                    "content": extracted_text,
-                }
+                    documents_dict[url_hash] = {
+                        "id": url_hash,
+                        "title": page_title,
+                        "linkText": link_text,
+                        "category": category,
+                        "sourcePageUrl": clean_url,
+                        "remotePdfUrl": pdf_url,
+                        "localPdfPath": f"/pdfs/{local_filename}",
+                        "lastReviewed": dates["lastReviewed"],
+                        "nextReview": dates["nextReview"],
+                        "content": extracted_text,
+                    }
+                except Exception as e:
+                    print(f"  [!] Failed processing PDF {pdf_url}: {e}")
 
-        # 2. Process HTML Web Guidelines (for pages without direct PDFs)
+        # 2. Process HTML Web Guidelines
         is_monograph_section = "drug-monographs" in url_lower or "parenteral" in url_lower or "oral" in url_lower
         is_root_landing = clean_url in [u.rstrip("/") for u in START_URLS]
         
         if not has_pdf and not is_monograph_section and not is_root_landing:
-            content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
-            
-            if content_container:
-                body_text = content_container.get_text(" ", strip=True)
-                
-                if len(body_text) > 100:
-                    doc_id = hashlib.md5(clean_url.encode()).hexdigest()[:10]
-                    if doc_id not in documents_dict:
-                        documents_dict[doc_id] = {
-                            "id": doc_id,
-                            "title": page_title,
-                            "linkText": "Web Guideline",
-                            "category": category,
-                            "sourcePageUrl": clean_url,
-                            "remotePdfUrl": None,
-                            "localPdfPath": None,
-                            "lastReviewed": dates["lastReviewed"],
-                            "nextReview": dates["nextReview"],
-                            "content": body_text,
-                        }
+            try:
+                content_container = soup.find("main") or soup.find("article") or soup.find("div", class_=re.compile("content|guideline", re.I))
+                if content_container:
+                    body_text = content_container.get_text(" ", strip=True)
+                    if len(body_text) > 100:
+                        doc_id = hashlib.md5(clean_url.encode()).hexdigest()[:10]
+                        if doc_id not in documents_dict:
+                            documents_dict[doc_id] = {
+                                "id": doc_id,
+                                "title": page_title,
+                                "linkText": "Web Guideline",
+                                "category": category,
+                                "sourcePageUrl": clean_url,
+                                "remotePdfUrl": None,
+                                "localPdfPath": None,
+                                "lastReviewed": dates["lastReviewed"],
+                                "nextReview": dates["nextReview"],
+                                "content": body_text,
+                            }
+            except Exception as e:
+                print(f"  [!] Failed parsing web content for {clean_url}: {e}")
 
     documents = list(documents_dict.values())
     save_manifest(manifest)
