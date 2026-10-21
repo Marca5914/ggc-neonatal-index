@@ -10,7 +10,10 @@ import fitz  # PyMuPDF
 
 BASE_URL = "https://www.clinicalguidelines.scot.nhs.uk"
 START_URLS = [
+    # Neonatology Guidelines & Monographs Directory
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/",
+    "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/neonatology/neonatal-drug-monographs/",
+    # General Paediatric Guidelines
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/ggc-paediatric-guidelines/",
     "https://www.clinicalguidelines.scot.nhs.uk/ggc-paediatric-guidelines/other-guidelines/",
 ]
@@ -20,7 +23,7 @@ INDEX_FILE = "./public/search_index.json"
 MANIFEST_FILE = "./manifest.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; GGC-Paediatric-Index-Sync/1.0)"
+    "User-Agent": "Mozilla/5.0 (compatible; GGC-Guideline-Index-Sync/1.0)"
 }
 
 os.makedirs(PDF_DIR, exist_ok=True)
@@ -87,10 +90,9 @@ def crawl_and_sync():
         try:
             resp = session.get(current_url, timeout=15)
             if resp.status_code != 200:
-                print(f"  [!] Skipped {clean_url}: HTTP status {resp.status_code}")
                 continue
         except Exception as e:
-            print(f"  [!] Error fetching {clean_url}: {e}")
+            print(f"  [!] Error fetching {current_url}: {e}")
             continue
 
         try:
@@ -104,20 +106,18 @@ def crawl_and_sync():
 
         url_lower = clean_url.lower()
         
-        # Categorization Logic
-        if "neonatology" in url_lower:
-            if "parenteral" in url_lower:
+        # Categorization Logic: Separate monographs vs neonatology vs paediatrics
+        if "neonatology" in url_lower or "drug-monographs" in url_lower:
+            if "parenteral" in url_lower or "iv" in url_lower:
                 category = "Neonatal IV Monograph"
             elif "oral" in url_lower:
-                category = "Neonatal Oral / Other"
-            elif "drug-monographs" in url_lower:
-                category = "Neonatal Monograph"
+                category = "Neonatal Oral Monograph"
             else:
                 category = "Neonatal Guideline"
         else:
             category = "Paediatric Guideline"
 
-        # Find direct PDF links or valid internal links
+        # Find direct PDF links or child guideline/monograph pages
         pdf_links = []
         for a in soup.find_all("a", href=True):
             try:
@@ -172,7 +172,7 @@ def crawl_and_sync():
                 except Exception as e:
                     print(f"  [!] Failed processing PDF {pdf_url}: {e}")
 
-        # 2. Process HTML Web Guidelines
+        # 2. Process HTML Web Guidelines (skip monograph container landing pages)
         is_monograph_section = "drug-monographs" in url_lower or "parenteral" in url_lower or "oral" in url_lower
         is_root_landing = clean_url in [u.rstrip("/") for u in START_URLS]
         
@@ -187,7 +187,7 @@ def crawl_and_sync():
                             documents_dict[doc_id] = {
                                 "id": doc_id,
                                 "title": page_title,
-                                "linkText": "Web Guideline",
+                                "linkText": "Web Guideline (Accordion/Pulldown)",
                                 "category": category,
                                 "sourcePageUrl": clean_url,
                                 "remotePdfUrl": None,
