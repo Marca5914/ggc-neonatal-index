@@ -26,7 +26,7 @@
           <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-blue-600 text-white font-bold text-sm">Rx</span>
           <h1 class="text-lg font-bold tracking-tight text-slate-900">GGC Neonatal Monographs & Guidelines</h1>
         </div>
-        <span id="sync-status" class="text-xs text-slate-500">Loading index...</span>
+        <span id="sync-status" class="text-xs font-medium text-amber-600">Loading index...</span>
       </div>
 
       <!-- Search Bar -->
@@ -35,7 +35,7 @@
           id="search-input"
           type="search"
           autocomplete="off"
-          placeholder="Search guideline, drug name, compatibility (e.g. 'respiratory distress', 'gentamicin trough', 'dobutamine')..."
+          placeholder="Search guideline, drug name, compatibility (e.g. 'respiratory distress', 'gentamicin trough')..."
           class="w-full pl-10 pr-20 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
         />
         <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,9 @@
 
   <!-- Main Results List -->
   <main class="max-w-4xl mx-auto px-4 py-5">
-    <div id="results-container" class="space-y-2.5"></div>
+    <div id="results-container" class="space-y-2.5">
+      <div class="text-center py-12 text-slate-400 text-sm">Waiting for search index to load...</div>
+    </div>
   </main>
 
   <script>
@@ -79,11 +81,12 @@
     const resultCount = document.getElementById("result-count");
     const syncStatus = document.getElementById("sync-status");
 
-    // 1. Initialize MiniSearch and Load JSON Index
     async function init() {
       try {
         const res = await fetch("./search_index.json");
-        if (!res.ok) throw new Error("Could not load search_index.json");
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}: search_index.json not found (Run the GitHub Action first)`);
+        }
         const data = await res.json();
 
         allDocuments = (data.documents || []).sort((a, b) => a.title.localeCompare(b.title));
@@ -92,6 +95,8 @@
         const syncDate = data.lastSynced ? new Date(data.lastSynced).toLocaleDateString("en-GB", {
           day: "2-digit", month: "short", year: "numeric"
         }) : "Unknown";
+        
+        syncStatus.className = "text-xs font-medium text-slate-500";
         syncStatus.textContent = `${allDocuments.length} docs indexed • Synced ${syncDate}`;
 
         miniSearch = new MiniSearch({
@@ -108,15 +113,20 @@
         miniSearch.addAll(allDocuments);
         renderResults();
       } catch (err) {
-        syncStatus.textContent = "Index load failed";
+        console.error(err);
+        syncStatus.className = "text-xs font-semibold text-red-600";
+        syncStatus.textContent = "Index Load Failed";
         resultsContainer.innerHTML = `
-          <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
-            <strong>Unable to load <code>search_index.json</code>.</strong> Run <code>python sync_monographs.py</code> first and serve the <code>./public</code> folder over a local web server.
+          <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700 leading-relaxed">
+            <strong>Failed to load search index:</strong><br/>
+            <code>${err.message}</code>
+            <p class="mt-2 text-xs text-red-600">
+              Make sure you have run the GitHub Action at least once so that <code>search_index.json</code> is generated and committed to your repository.
+            </p>
           </div>`;
       }
     }
 
-    // 2. Build Context Snippet with Highlighted Terms & Page Number
     function buildSnippet(content, rawQuery) {
       if (!content || !rawQuery.trim()) return "";
       const terms = rawQuery.trim().toLowerCase().split(/\s+/).filter(t => t.length >= 2);
@@ -175,7 +185,6 @@
       return reviewDate < new Date();
     }
 
-    // 3. Filter & Render Cards
     function renderResults() {
       const query = searchInput.value.trim();
       clearBtn.classList.toggle("hidden", query.length === 0);
@@ -235,7 +244,7 @@
                   ${doc.lastReviewed ? `<span>Reviewed: ${doc.lastReviewed}</span>` : ""}
                   ${doc.nextReview ? `
                     <span class="${overdue ? "text-amber-700 font-semibold" : ""}">
-                      Next Review: ${doc.nextReview} ${overdue ? "(Due)" : ""}
+                      Next Review: ${doc.nextReview}${overdue ? "(Due)" : ""}
                     </span>` : ""}
                   <a href="${doc.sourcePageUrl}" target="_blank" rel="noopener" class="text-slate-400 hover:text-slate-600 underline">
                     GGC Source Page ↗
@@ -243,6 +252,57 @@
                 </div>
               </div>
 
-              <!-- Direct 1-Click PDF Action -->
+              <!-- Direct 1-Click Action -->
               <div class="flex items-center gap-1.5 shrink-0">
-                ${doc.local
+                ${doc.localPdfPath ? `
+                  <a href=".${doc.localPdfPath}" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+                    <span>Open PDF</span>
+                  </a>
+                ` : `
+                  <a href="${doc.sourcePageUrl}" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold rounded-lg transition">
+                    <span>Web Page</span>
+                  </a>
+                `}
+              </div>
+            </div>
+            ${snippetHtml}
+          </article>
+        `;
+      }).join("");
+    }
+
+    searchInput.addEventListener("input", renderResults);
+
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.focus();
+      renderResults();
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      } else if (e.key === "Escape" && document.activeElement === searchInput) {
+        searchInput.value = "";
+        renderResults();
+      }
+    });
+
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".cat-btn").forEach(b => {
+          b.className = "cat-btn px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+        });
+        btn.className = "cat-btn active px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition";
+        activeCategory = btn.dataset.cat;
+        renderResults();
+      });
+    });
+
+    init();
+  </script>
+</body>
+</html>
